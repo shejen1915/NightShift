@@ -5,22 +5,21 @@
  */
 package byui.cit260.nightShift.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Ni shi shei
  */
-public class Player {
-    
+public class Player implements Serializable {
+    //class instance variables
     private String name;
     private double highScore;
 
     public Player() {
     }
     
-    
-
     public String getName() {
         return name;
     }
@@ -39,12 +38,17 @@ public class Player {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 97 * hash + Objects.hashCode(this.name);
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.highScore) ^ (Double.doubleToLongBits(this.highScore) >>> 32));
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.name);
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.highScore) ^ (Double.doubleToLongBits(this.highScore) >>> 32));
         return hash;
     }
 
+    /**
+     *
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -60,17 +64,17 @@ public class Player {
         if (Double.doubleToLongBits(this.highScore) != Double.doubleToLongBits(other.highScore)) {
             return false;
         }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.name, other.name);
     }
 
     @Override
     public String toString() {
         return "Player{" + "name=" + name + ", highScore=" + highScore + '}';
     }
-    
+
+    public void setBestTime(double d) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
