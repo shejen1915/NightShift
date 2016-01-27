@@ -20,7 +20,7 @@ public class NightShift {
         Player playerOne = new Player();
         
         playerOne.setName("Vlad Impaler");
-        playerOne.setBestTime(7.00);
+        playerOne.setHighScore(7.00);
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
