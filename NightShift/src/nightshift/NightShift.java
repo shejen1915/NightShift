@@ -24,6 +24,5 @@ public class NightShift {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
-    }
-    
-}
+    }    }
+     
