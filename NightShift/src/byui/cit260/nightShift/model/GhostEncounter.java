@@ -5,28 +5,32 @@
  */
 package byui.cit260.nightShift.model;
 
+import java.util.Objects;
+
 /**
  *
- * @author Silver
+ * @author Ni shi shei
  */
 public class GhostEncounter extends UpDown{
     
-    // class instance variables
-    private double ghostEncounter;
+    private String ghostEquation;
 
     public GhostEncounter() {
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 79 * hash + (int) (Double.doubleToLongBits(this.ghostEncounter) ^ (Double.doubleToLongBits(this.ghostEncounter) >>> 32));
-        return hash;
+    public String getGhostEquation() {
+        return ghostEquation;
+    }
+
+    public void setGhostEquation(String ghostEquation) {
+        this.ghostEquation = ghostEquation;
     }
 
     @Override
-    public String toString() {
-        return "GhostEncounter{" + "ghostEncounter=" + ghostEncounter + '}';
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + Objects.hashCode(this.ghostEquation);
+        return hash;
     }
 
     @Override
@@ -41,21 +45,17 @@ public class GhostEncounter extends UpDown{
             return false;
         }
         final GhostEncounter other = (GhostEncounter) obj;
-        if (Double.doubleToLongBits(this.ghostEncounter) != Double.doubleToLongBits(other.ghostEncounter)) {
+        if (!Objects.equals(this.ghostEquation, other.ghostEquation)) {
             return false;
         }
         return true;
     }
 
-    
-    
-    public double getGhostEncounter() {
-        return ghostEncounter;
+    @Override
+    public String toString() {
+        return "GhostEncounter{" + "ghostEquation=" + ghostEquation + '}';
     }
-
-    public void setGhostEncounter(double ghostEncounter) {
-        this.ghostEncounter = ghostEncounter;
-    }
+    
     
     
 }
