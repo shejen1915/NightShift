@@ -1,0 +1,75 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package byui.cit260.nightShift.model;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+/**
+ *
+ * @author Ni shi shei
+ */
+public class CharmItem implements Serializable{
+    
+    private double defenseBoost;
+    private String mapLocation;
+
+    public CharmItem() {
+    }
+
+    public double getDefenseBoost() {
+        return defenseBoost;
+    }
+
+    public void setDefenseBoost(double defenseBoost) {
+        this.defenseBoost = defenseBoost;
+    }
+
+    public String getMapLocation() {
+        return mapLocation;
+    }
+
+    public void setMapLocation(String mapLocation) {
+        this.mapLocation = mapLocation;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.defenseBoost) ^ (Double.doubleToLongBits(this.defenseBoost) >>> 32));
+        hash = 29 * hash + Objects.hashCode(this.mapLocation);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final CharmItem other = (CharmItem) obj;
+        if (Double.doubleToLongBits(this.defenseBoost) != Double.doubleToLongBits(other.defenseBoost)) {
+            return false;
+        }
+        if (!Objects.equals(this.mapLocation, other.mapLocation)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "CharmItem{" + "defenseBoost=" + defenseBoost + ", mapLocation=" + mapLocation + '}';
+    }
+    
+    
+    
+}
