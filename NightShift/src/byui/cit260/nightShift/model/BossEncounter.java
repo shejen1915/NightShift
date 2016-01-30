@@ -5,28 +5,32 @@
  */
 package byui.cit260.nightShift.model;
 
+import java.util.Objects;
+
 /**
  *
- * @author Silver
+ * @author Ni shi shei
  */
 public class BossEncounter extends UpDown{
     
-    //class instance variables
-    private double bossEquation;
+    private String bossEquation;
 
     public BossEncounter() {
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 41 * hash + (int) (Double.doubleToLongBits(this.bossEquation) ^ (Double.doubleToLongBits(this.bossEquation) >>> 32));
-        return hash;
+    public String getBossEquation() {
+        return bossEquation;
+    }
+
+    public void setBossEquation(String bossEquation) {
+        this.bossEquation = bossEquation;
     }
 
     @Override
-    public String toString() {
-        return "BossEncounter{" + "bossEquation=" + bossEquation + '}';
+    public int hashCode() {
+        int hash = 7;
+        hash = 17 * hash + Objects.hashCode(this.bossEquation);
+        return hash;
     }
 
     @Override
@@ -41,19 +45,16 @@ public class BossEncounter extends UpDown{
             return false;
         }
         final BossEncounter other = (BossEncounter) obj;
-        return Double.doubleToLongBits(this.bossEquation) == Double.doubleToLongBits(other.bossEquation);
-    }
-    
-    
-
-    public double getBossEquation() {
-        return bossEquation;
+        if (!Objects.equals(this.bossEquation, other.bossEquation)) {
+            return false;
+        }
+        return true;
     }
 
-    public void setBossEquation(double bossEquation) {
-        this.bossEquation = bossEquation;
+    @Override
+    public String toString() {
+        return "BossEncounter{" + "bossEquation=" + bossEquation + '}';
     }
     
-            
     
 }
