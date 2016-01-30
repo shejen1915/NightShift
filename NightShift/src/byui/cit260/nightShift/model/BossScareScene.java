@@ -9,30 +9,48 @@ import java.util.Objects;
 
 /**
  *
- * @author Silver
+ * @author Ni shi shei
  */
 public class BossScareScene extends RegularScene{
     
-    // class instance variables
     private String callBoss;
     private String summonGhost;
-    private String bossEcounternullify;
+    private String bossEncounterNullify;
 
     public BossScareScene() {
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 79 * hash + Objects.hashCode(this.callBoss);
-        hash = 79 * hash + Objects.hashCode(this.summonGhost);
-        hash = 79 * hash + Objects.hashCode(this.bossEcounternullify);
-        return hash;
+    public String getCallBoss() {
+        return callBoss;
+    }
+
+    public void setCallBoss(String callBoss) {
+        this.callBoss = callBoss;
+    }
+
+    public String getSummonGhost() {
+        return summonGhost;
+    }
+
+    public void setSummonGhost(String summonGhost) {
+        this.summonGhost = summonGhost;
+    }
+
+    public String getBossEncounterNullify() {
+        return bossEncounterNullify;
+    }
+
+    public void setBossEncounterNullify(String bossEncounterNullify) {
+        this.bossEncounterNullify = bossEncounterNullify;
     }
 
     @Override
-    public String toString() {
-        return "BossScareScene{" + "callBoss=" + callBoss + ", summonGhost=" + summonGhost + ", bossEcounternullify=" + bossEcounternullify + '}';
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + Objects.hashCode(this.callBoss);
+        hash = 53 * hash + Objects.hashCode(this.summonGhost);
+        hash = 53 * hash + Objects.hashCode(this.bossEncounterNullify);
+        return hash;
     }
 
     @Override
@@ -53,33 +71,15 @@ public class BossScareScene extends RegularScene{
         if (!Objects.equals(this.summonGhost, other.summonGhost)) {
             return false;
         }
-        return Objects.equals(this.bossEcounternullify, other.bossEcounternullify);
+        if (!Objects.equals(this.bossEncounterNullify, other.bossEncounterNullify)) {
+            return false;
+        }
+        return true;
     }
 
-    
-    
-    public String getCallBoss() {
-        return callBoss;
-    }
-
-    public void setCallBoss(String callBoss) {
-        this.callBoss = callBoss;
-    }
-
-    public String getSummonGhost() {
-        return summonGhost;
-    }
-
-    public void setSummonGhost(String summonGhost) {
-        this.summonGhost = summonGhost;
-    }
-
-    public String getBossEcounternullify() {
-        return bossEcounternullify;
-    }
-
-    public void setBossEcounternullify(String bossEcounternullify) {
-        this.bossEcounternullify = bossEcounternullify;
+    @Override
+    public String toString() {
+        return "BossScareScene{" + "callBoss=" + callBoss + ", summonGhost=" + summonGhost + ", bossEncounterNullify=" + bossEncounterNullify + '}';
     }
     
     
