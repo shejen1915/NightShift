@@ -5,7 +5,14 @@
  */
 package nightshift;
 
+import byui.cit260.nightShift.model.Actor;
+import byui.cit260.nightShift.model.AttackItem;
+import byui.cit260.nightShift.model.CharmItem;
+import byui.cit260.nightShift.model.Game;
+import byui.cit260.nightShift.model.InventoryItem;
+import byui.cit260.nightShift.model.Map;
 import byui.cit260.nightShift.model.Player;
+import byui.cit260.nightShift.model.ToolItem;
 
 /**
  *
