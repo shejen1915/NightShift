@@ -12,8 +12,9 @@ import java.util.Objects;
  * @author Ni shi shei
  */
 public class BossEncounter extends UpDown{
-    
+
     private String bossEquation;
+    
 
     public BossEncounter() {
     }
@@ -47,7 +48,7 @@ public class BossEncounter extends UpDown{
         final BossEncounter other = (BossEncounter) obj;
         if (!Objects.equals(this.bossEquation, other.bossEquation)) {
             return false;
-        }
+    }
         return true;
     }
 
@@ -55,6 +56,6 @@ public class BossEncounter extends UpDown{
     public String toString() {
         return "BossEncounter{" + "bossEquation=" + bossEquation + '}';
     }
-    
-    
+
+  
 }
