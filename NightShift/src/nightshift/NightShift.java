@@ -21,6 +21,7 @@ import byui.cit260.nightShift.model.Player;
 import byui.cit260.nightShift.model.RegularScene;
 import byui.cit260.nightShift.model.ToolItem;
 import byui.cit260.nightShift.model.UpDown;
+import byui.cit260.nightShift.view.StartProgramView;
 
 /**
  *
@@ -31,7 +32,33 @@ public class NightShift {
     /**
      * @param args the command line arguments
      */
+    private static Game currentGame = null;
+    private static Player player = null;
+    
     public static void main(String[] args) {
+        
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
+    }
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        NightShift.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        NightShift.player = player;
+    }
+    
+}
+    /** SHOULD I REALLY DELETE ALL THIS?
         Player playerOne = new Player();
         
         playerOne.setName("Vlad Impaler");
@@ -188,6 +215,6 @@ public class NightShift {
         String upDownInfo = upDownOne.toString();
         System.out.println(upDownInfo);
     }    
+    */
 
-}
      
