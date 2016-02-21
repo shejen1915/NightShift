@@ -5,10 +5,26 @@
  */
 package byui.cit260.nightShift.control;
 
+import byui.cit260.nightShift.model.Player;
+import nightshift.NightShift;
+
 /**
  *
  * @author Ni shi shei
  */
 public class GameControl {
+
+    public static Player createPlayer(String name) {
+        if (name == null) {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(name);
+        
+        NightShift.setPlayer(player); // save the player
+        
+        return player;
+    }
     
 }
