@@ -73,7 +73,7 @@ public class BossScareScene extends RegularScene{
         }
         if (!Objects.equals(this.bossEncounterNullify, other.bossEncounterNullify)) {
             return false;
-        }
+    }
         return true;
     }
 
