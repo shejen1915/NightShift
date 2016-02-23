@@ -18,11 +18,11 @@ public class MainMenuView {
                   + "\n----------------------------------------"
                   + "\n| Main Menu                            |"
                   + "\n----------------------------------------"
-                  + "\nN - Unto a New Adventure!"
-                  + "\nG - Get and start saved game"
-                  + "\nH - I Need Help!"
-                  + "\nS - Take a Nap(Save)"
-                  + "\nQ - I'm Out!(Quit)"
+                  + "\nN - Unto a New Adventure!               "
+                  + "\nG - Get and start saved game            "
+                  + "\nH - I Need Help!                        "
+                  + "\nS - Take a Nap(Save)                    "
+                  + "\nQ - I'm Out!(Quit)                      "
                   + "\n----------------------------------------";
     }
     
