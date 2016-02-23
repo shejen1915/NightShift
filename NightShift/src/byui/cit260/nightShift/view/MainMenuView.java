@@ -18,11 +18,11 @@ public class MainMenuView {
                   + "\n----------------------------------------"
                   + "\n| Main Menu                            |"
                   + "\n----------------------------------------"
-                  + "\nN - Start new game"
+                  + "\nN - Unto a New Adventure!"
                   + "\nG - Get and start saved game"
-                  + "\nH - Get help on how to play the game"
-                  + "\nS - Save game"
-                  + "\nQ - Quit"
+                  + "\nH - I Need Help!"
+                  + "\nS - Take a Nap(Save)"
+                  + "\nQ - I'm Out!(Quit)"
                   + "\n----------------------------------------";
     }
     
@@ -48,8 +48,9 @@ public class MainMenuView {
     
     private boolean doAction(String menuOption) {
         System.out.println("\n*** doAction() function called ***");
-    }
-
+        boolean string = false;
+    return string ; }
+    
     private Object toUpperCase() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
