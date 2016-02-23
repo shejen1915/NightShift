@@ -10,7 +10,7 @@ package byui.cit260.nightShift.control;
  * @author Ni shi shei
  */
 public class BossEncounterControl {
-        public double bossEquation(double upDown, double , int goingDown){
+        public double bossEquation(double goingUp, double , int goingDown){
         
 
         if (goingDown <= 7) { // going down is null?
@@ -29,6 +29,6 @@ public class BossEncounterControl {
         
         double gettingCought ;
         gettingCought = (Math.PI* slyNess * sneakY);
-        
-    return }
+
+    return ; 
 
