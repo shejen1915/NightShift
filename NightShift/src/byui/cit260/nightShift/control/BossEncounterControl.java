@@ -10,17 +10,17 @@ package byui.cit260.nightShift.control;
  * @author Ni shi shei
  */
 public class BossEncounterControl {
-        public double bossEquation(double upDpwn, double ); static {
-        int goingDown = 0;
-     
+        public double bossEquation(double upDown, double , int goingDown){
+        
 
-        if (goingDown <= 7 { // going down is null?
-            return 0; 
+        if (goingDown <= 7) { // going down is null?
+            return -1; 
     }
-        int goingUp = 0;
+        int goingUp;
+            goingUp = 0;
         if (goingUp <= 7) {
             // goingUp is always 100
-            return 100% ;
+            return -1 ;
         } else {                      }
         double slyNess ;
         slyNess = goingUp - goingDown;
@@ -30,7 +30,5 @@ public class BossEncounterControl {
         double gettingCought ;
         gettingCought = (Math.PI* slyNess * sneakY);
         
-}static {
-    
-}
+    return }
 
