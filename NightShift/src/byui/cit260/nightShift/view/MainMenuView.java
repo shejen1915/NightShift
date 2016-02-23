@@ -32,8 +32,11 @@ public class MainMenuView {
         do {
             // prompt for and get players name
             String menuOption = this.getMenuOption();
-            if (menuOption).toUpperCase().equals("Q"); // user wants to quit
+            if (   menuOption.toUpperCase().equals("Q")   ) {
                 return; // exit the game
+            }
+
+                
                 
             // do the requested action and display the next view
             done = this.doAction(menuOption);
