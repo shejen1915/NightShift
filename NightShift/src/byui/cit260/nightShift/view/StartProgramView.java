@@ -28,13 +28,20 @@ public class StartProgramView {
     private void displayBanner() {
         
     System.out.println(
-        "\n***************************************"
-       +"\n                                       "
-       +"\n             NIGHT SHIFT               "
-       +"\n Victor is a security guard working    "
-       +"\n the night shift in ????????           "
-       +"\n                                       "
-       +"\n***************************************"
+        "\n***********************************************************"
+       +"\n                                                           "
+       +"\n             NIGHT SHIFT                                   "
+       +"\n You are Victor a twenty something year old college student"
+       +"\n who is working shifts in the local mall in order to pay   "
+       +"\n for college. You will be going home for your track in a   "
+       +"\n week and so this is your last day at the JOB and honestly "
+       +"\n you simply want your shift to end so that you can go home."
+       +"\n Your Manager can be really annoying and enjoys forcing    "
+       +"\n you to work. For that reason you are trying to outsmart   "
+       +"\n him. There are many rooms in the mall, and this is your   "
+       +"\n last day, so make the most of it! But becareful to not get"
+       +"\n to careless. Now go make this night shift fun!            "         
+       +"\n***********************************************************"
         );
     }
 
@@ -111,7 +118,7 @@ public class StartProgramView {
             // display "Invalid name: The name is too short"
             // return false
             // display next view
-            this.displayNextView();
+            
             
         // display customized welcome message
         // display mainMenuView        
@@ -133,7 +140,8 @@ public class StartProgramView {
         return true;
     }
 
-    private void displayNextView() {
+
+    private void displayNextView(Player player) {
         System.out.println("\n========================================="
                            +"\n Welcome to the game " + player.getName()
                            +"\n We hope you have a lot of fun!"
@@ -146,14 +154,8 @@ public class StartProgramView {
         mainMenuView.displayMainMenuView();
     }
 
-    private static class player {
+    
 
-        private static String getName() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public player() {
-        }
-    }
+  
     
 }
