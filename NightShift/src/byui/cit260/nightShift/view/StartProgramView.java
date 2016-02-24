@@ -30,7 +30,7 @@ public class StartProgramView {
     System.out.println(
         "\n***********************************************************"
        +"\n                                                           "
-       +"\n             NIGHT SHIFT                                   "
+       +"\n                      NIGHT SHIFT                          "
        +"\n You are Victor a twenty something year old college student"
        +"\n who is working shifts in the local mall in order to pay   "
        +"\n for college. You will be going home for your track in a   "
@@ -137,6 +137,7 @@ public class StartProgramView {
             System.out.println("\nError creating the player.");
             return false;
         }
+        this.displayNextView(player);
         return true;
     }
 
@@ -155,7 +156,7 @@ public class StartProgramView {
     }
 
     
-
+    
   
     
 }
