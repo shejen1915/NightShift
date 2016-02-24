@@ -27,8 +27,9 @@ public class MainMenuView {
     }
 
     public void displayMainMenuView() {
-
-        boolean done = false; // set flag to not done
+            System.out.println("\n*** displayMenu() function called ***");
+    
+            boolean done = false; // set flag to not done
         do {
             // prompt for and get players name
             String menuOption = this.getMenuOption();
