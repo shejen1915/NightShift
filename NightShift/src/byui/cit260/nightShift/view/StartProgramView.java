@@ -139,6 +139,7 @@ public class StartProgramView {
         }
         this.displayNextView(player);
         return true;
+        
     }
 
 
@@ -154,9 +155,5 @@ public class StartProgramView {
         //Display the main menu view
         mainMenuView.displayMainMenuView();
     }
-
-    
-    
-  
     
 }
