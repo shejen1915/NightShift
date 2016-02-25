@@ -157,7 +157,8 @@ public class MainMenuView {
     }
 
     private void startExistingGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ExistingGameView existingGame = new ExistingGameview();
+        existingGame.displayExistingGames();
     }
 
     private void displayHelpMenu() {
@@ -167,6 +168,12 @@ public class MainMenuView {
 
     private void saveGame() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static class ExistingGameview extends ExistingGameView {
+
+        public ExistingGameview() {
+        }
     }
         
     }
