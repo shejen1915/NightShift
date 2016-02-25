@@ -5,49 +5,47 @@
  */
 package byui.cit260.nightShift.view;
 
-import byui.cit260.nightShift.control.GameControl;
 import java.util.Scanner;
-import nightshift.NightShift;
 
 /**
  *
  * @author Ni shi shei
  */
-public class MainMenuView {
+public class HelpMenuView {
+        private String menu;
+    void displayHelpMenu() {
 
-    private String menu;
 
-    public MainMenuView() {
         this.menu = "\n"
                 + "\n----------------------------------------"
-                + "\n| Main Menu                            |"
+                + "\n| Help Menu                            |"
                 + "\n----------------------------------------"
-                + "\nN - Unto a New Adventure!               "
-                + "\nG - Get and start saved game            "
-                + "\nH - I Need Help!                        "
-                + "\nS - Take a Nap(Save)                    "
+                + "\nG - The Quest?!                         "
+                + "\nM - How to Move                         "
+                + "\nE - Collect Items                       "
+                + "\nH - Use Items                           "
+                + "\nD - Map Locations                       "
                 + "\nQ - I'm Out!(Quit)                      "
                 + "\n----------------------------------------";
     }
 
-    public void displayMainMenuView() {
-            
-    
-            boolean done = false; // set flag to not done
+    public void displayHelpMenuView() {
+
+        boolean done = false; // set flag to not done
         do {
             // prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) {
+            String helpMenuOption = this.getHelpMenuOption();
+            if (helpMenuOption.toUpperCase().equals("Q")) {
                 return; // exit the game
             }
 
             // do the requested action and display the next view
-            done = this.doAction(menuOption);
+            done = this.doAction(helpMenuOption);
 
         } while (!done);
     }
 
-    private String getMenuOption() {
+    private String getHelpMenuOption() {
         /*
         System.out.println("\n*** getMenuOption() function called ***");
         return "N";
@@ -115,17 +113,20 @@ public class MainMenuView {
         choice = choice.toUpperCase();
         
         switch (choice) {
-        case "N": // create and start a new game
-            this.startNewGame();
+        case "G": // what is your Quest?!
+            this.questDescription();
             break;
-        case "G": // get and start an existing game
-            this.startExistingGame();
+        case "M": // how to move
+            this.happyFeet();
             break;
-        case "H": // display the help menu
-            this.displayHelpMenu();
+        case "E": // collect Items
+            this.packrat();
             break;
-        case "S": // save the current game
-            this.saveGame();
+        case "H": // use items
+            this.userAndAbuser();
+            break;
+        case "D": // map locations
+            this.imTheMap();
             break;
         default:
             System.out.println("\n*** Invalid selection *** Try again");
@@ -134,58 +135,29 @@ public class MainMenuView {
     
     return false;
 }
-        
-        //call createPlayer() control function
-        /*
-        Player player = GameControl.createPlayer(playersName);
-        
-        if (player == null) { // if unsuccessful
-            System.out.println("\nError creating the player.");
-            return false;
-        }
-        
-        this.displayNextView(player);
-        */
 
-    private void startNewGame() {
-            // create a new game
-        GameControl.createNewGame(NightShift.getPlayer());
-                
-        //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-    }
-
-    private void startExistingGame() {
+    private void questDescription() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void displayHelpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenu();
-    }
-
-    private void saveGame() {
+    private void happyFeet() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-        
+
+    private void packrat() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void userAndAbuser() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void imTheMap() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 /*
-            private void displayNextView(Player player) {
-        System.out.println("\n========================================="
-                           +"\n Welcome to the game " + player.getName()
-                           +"\n We hope you have a lot of fun!"
-                           +"\n========================================"
-                            );
-        //create MainMenuView object
-        MainMenuView mainMenuView = new MainMenuView();
-                
-        //Display the main menu view
-        mainMenuView.displayMainMenuView();
-    }
-    }
-
-    private Object toUpperCase() {
+    void displayHelpMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 */
+}
