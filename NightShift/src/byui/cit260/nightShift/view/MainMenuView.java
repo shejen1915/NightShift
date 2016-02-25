@@ -27,7 +27,7 @@ public class MainMenuView {
     }
 
     public void displayMainMenuView() {
-            System.out.println("\n*** displayMenu() function called ***");
+            
     
             boolean done = false; // set flag to not done
         do {
