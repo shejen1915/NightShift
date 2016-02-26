@@ -163,7 +163,7 @@ public class MainMenuView {
 
     private void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenu();
+        helpMenu.displayHelpMenuView();
     }
 
     private void saveGame() {
