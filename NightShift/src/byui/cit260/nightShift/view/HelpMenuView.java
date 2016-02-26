@@ -126,7 +126,7 @@ public class HelpMenuView {
             this.userAndAbuser();
             break;
         case "D": // map locations
-            this.imTheMapView();
+            this.ImTheMapView();
             break;
         default:
             System.out.println("\n*** Invalid selection *** Try again");
@@ -152,9 +152,9 @@ public class HelpMenuView {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void imTheMapView() {
-      imTheMapView imTheMapMenu = new imTheMapView();
-        imTheMapMenu.displayimTheMapMenu();
+    private void ImTheMapView() {
+      ImTheMapView imTheMap = new ImTheMapView();
+        imTheMap.displayImTheMapView();
     }
 /*
     void displayHelpMenu() {
