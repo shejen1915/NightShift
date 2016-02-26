@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class HelpMenuView {
         private String menu;
-    void displayHelpMenu() {
+   public HelpMenuView() {
 
 
         this.menu = "\n"
