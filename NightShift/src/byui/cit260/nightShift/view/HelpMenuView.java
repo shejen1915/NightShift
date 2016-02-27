@@ -25,6 +25,8 @@ public class HelpMenuView {
                 + "\nE - Collect Items                       "
                 + "\nH - Use Items                           "
                 + "\nD - Map Locations                       "
+                + "\nT - Talk to NPC Actor simulation        "
+                + "\nI - Item interaction simulation         "
                 + "\nQ - I'm Out!(Quit)                      "
                 + "\n----------------------------------------";
     }
@@ -90,7 +92,7 @@ public class HelpMenuView {
     }
    
 
-    public boolean doAction(String choice) {
+    private boolean doAction(String choice) {
         //System.out.println("\n*** doAction() function called ***");
         //return true;
     //private boolean doAction(String playersName) {
@@ -128,6 +130,12 @@ public class HelpMenuView {
         case "D": // map locations
             this.ImTheMapView();
             break;
+        case "T": // temporary simulation of an interaction with an npc actor
+            this.ActorInteractionView();
+            break;
+        case "I": // temporary simulation of an interaction with an item
+            this.ItemInteractionView();
+            break;
         default:
             System.out.println("\n*** Invalid selection *** Try again");
             break;
@@ -161,4 +169,14 @@ public class HelpMenuView {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 */
+
+    private void ActorInteractionView() {
+        ActorInteractionView actorInteraction = new ActorInteractionView();
+        actorInteraction.displayActorInteractionView();
+    }
+
+    private void ItemInteractionView() {
+        ItemInteractionView itemInteraction = new ItemInteractionView();
+        itemInteraction.displayItemInteractionView();
+    }
 }

@@ -17,6 +17,7 @@ public class Actor implements Serializable{
     private String name;
     private String description;
     private String startLocation;
+    private String conversation;
     private double interactionBonus;
     private double interactionPenalty;
 
@@ -47,6 +48,14 @@ public class Actor implements Serializable{
         this.startLocation = startLocation;
     }
 
+    public String getConversation() {
+        return conversation;
+    }
+
+    public void setConversation(String conversation) {
+        this.conversation = conversation;
+    }
+
     public double getInteractionBonus() {
         return interactionBonus;
     }
@@ -65,12 +74,13 @@ public class Actor implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 97 * hash + Objects.hashCode(this.name);
-        hash = 97 * hash + Objects.hashCode(this.description);
-        hash = 97 * hash + Objects.hashCode(this.startLocation);
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.interactionBonus) ^ (Double.doubleToLongBits(this.interactionBonus) >>> 32));
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.interactionPenalty) ^ (Double.doubleToLongBits(this.interactionPenalty) >>> 32));
+        int hash = 7;
+        hash = 29 * hash + Objects.hashCode(this.name);
+        hash = 29 * hash + Objects.hashCode(this.description);
+        hash = 29 * hash + Objects.hashCode(this.startLocation);
+        hash = 29 * hash + Objects.hashCode(this.conversation);
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.interactionBonus) ^ (Double.doubleToLongBits(this.interactionBonus) >>> 32));
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.interactionPenalty) ^ (Double.doubleToLongBits(this.interactionPenalty) >>> 32));
         return hash;
     }
 
@@ -101,14 +111,16 @@ public class Actor implements Serializable{
         if (!Objects.equals(this.startLocation, other.startLocation)) {
             return false;
         }
+        if (!Objects.equals(this.conversation, other.conversation)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Actor{" + "name=" + name + ", description=" + description + ", startLocation=" + startLocation + ", interactionBonus=" + interactionBonus + ", interactionPenalty=" + interactionPenalty + '}';
+        return "Actor{" + "name=" + name + ", description=" + description + ", startLocation=" + startLocation + ", conversation=" + conversation + ", interactionBonus=" + interactionBonus + ", interactionPenalty=" + interactionPenalty + '}';
     }
-    
     
     
 }
