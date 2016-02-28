@@ -33,8 +33,8 @@ public class ItemInteractionView {
                 + "\n----------------------------------------"
                 + "\n|   Untake-able Item Interaction Menu   "
                 + "\n----------------------------------------"
-                + "\nY - Interact with item                  "
-                + "\nX - User item                           "
+                + "\nX - Interact with item                  "
+                + "\nY - User item                           "
                 + "\nI - see item Information                "
                 + "\nL - Leave menu                          "
                 + "\n----------------------------------------";
@@ -44,41 +44,21 @@ public class ItemInteractionView {
         private String promptMessage;
 
         public ItemInteractionView(){
-            this.promptMessage = "\nYou see an item. Interact with item, yes[Y] or no[N]?***";
-            
+            this.promptMessage = "\nYou see an item. Interact with item, yes[X] or no[N]?";
     }
     
     public void displayItemInteractionView(){
-        
-            
-        
-        
         boolean done = false; //set flag to not done
-        do {
+        do{
             //prompt for choice from player
             String itemInteractionChoice = this.getItemInteractionChoice();
-            
-            
             if (itemInteractionChoice.toUpperCase().equals("N"))// user doesn't want to interact with item
                 return; // exit interaction
             
-            else if (itemInteractionChoice.toUpperCase().equals("Y")) 
-                System.out.println("\nView item information[I]?");
-                
-            
-            else if (itemInteractionChoice.toUpperCase().equals("I"))
-                System.out.println("\nTake this item and put it in your Inventory[T]?");
-            
-            else if (itemInteractionChoice.toUpperCase().equals("T"))
-                System.out.println("\nUse this item[X]?");
-            
-            else if (itemInteractionChoice.toUpperCase().equals("X"))
-                            
             // do the requested action and display the next view
             done = this.doAction(itemInteractionChoice);
             
         } while (!done);
-      
     }
 
     private String getItemInteractionChoice() {
@@ -156,7 +136,7 @@ public class ItemInteractionView {
         choice = choice.toUpperCase();
         
         switch (choice) {
-        case "Y": // what is your Quest?!
+        case "X": // what is your Quest?!
             this.itemInteraction();
             break;
         case "I": // how to move
@@ -165,7 +145,7 @@ public class ItemInteractionView {
         case "T": // use items
             this.takeItem();
             break;
-        case "X": // map locations
+        case "Y": // map locations
             this.useItem();
             break;
         default:
