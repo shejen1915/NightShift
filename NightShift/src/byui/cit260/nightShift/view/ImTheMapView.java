@@ -11,9 +11,9 @@ import java.util.Scanner;
  *
  * @author Silver
  */
-public class ImTheMapView2 {
+public class ImTheMapView {
         private String menu;
-    public ImTheMapView2() {
+    public ImTheMapView() {
         this.menu = "\n"
                 + "\n----------------------------------------"
                 + "\n|  ImTheMap                            |"
