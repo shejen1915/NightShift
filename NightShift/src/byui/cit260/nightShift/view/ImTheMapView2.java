@@ -1,4 +1,3 @@
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,9 +11,9 @@ import java.util.Scanner;
  *
  * @author Silver
  */
-public class ImTheMapView {
+public class ImTheMapView2 {
         private String menu;
-    public ImTheMapView() {
+    public ImTheMapView2() {
         this.menu = "\n"
                 + "\n----------------------------------------"
                 + "\n|  ImTheMap                            |"
@@ -169,4 +168,7 @@ public class ImTheMapView {
 
     private void FirstRule() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }}
+    }
+
+    
+}
