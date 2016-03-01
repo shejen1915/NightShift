@@ -5,49 +5,56 @@
  */
 package byui.cit260.nightShift.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Ni shi shei
  */
-public class HelpMenuView {
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Silver
+ */
+public class ImTheMapView {
         private String menu;
-   public HelpMenuView() {
-
-
+    public ImTheMapView() {
         this.menu = "\n"
                 + "\n----------------------------------------"
-                + "\n| Help Menu                            |"
+                + "\n|  ImTheMap                            |"
                 + "\n----------------------------------------"
-                + "\nG - The Quest?!                         "
-                + "\nM - How to Move                         "
-                + "\nE - Collect Items                       "
-                + "\nH - Use Items                           "
-                + "\nD - Map Locations                       "
-                + "\nT - Talk to NPC Actor simulation        "
-                + "\nI - Item interaction simulation         "
-                + "\nQ - I'm Out!(Quit)                      "
+                + "\nR - Roof                                "
+                + "\nM - Melalucre                           "
+                + "\nS - Sammy's                             "
+                + "\nB - Cocoa Bean                          "
+                + "\nK - The Kraze                           "
+                + "\nC - The Cross Roads                     "
+                + "\nF - Fight Club                          "
+                + "\nQ - I'm Out!(Return)                      "
                 + "\n----------------------------------------";
     }
 
-    public void displayHelpMenuView() {
+    public void displayImTheMapView() {
 
         boolean done = false; // set flag to not done
         do {
-            // prompt for and get players name
-            String helpMenuOption = this.getHelpMenuOption();
-            if (helpMenuOption.toUpperCase().equals("Q")) {
+            // prompt for map level
+           String imTheMapOption = this.getImTheMapOption();
+            if (imTheMapOption.toUpperCase().equals("Q")) {
                 return; // exit the game
             }
 
             // do the requested action and display the next view
-            done = this.doAction(helpMenuOption);
+            done = this.doAction(imTheMapOption);
 
         } while (!done);
     }
-
-    private String getHelpMenuOption() {
+    private String getImTheMapOption() {
         /*
         System.out.println("\n*** getMenuOption() function called ***");
         return "N";
@@ -90,9 +97,10 @@ public class HelpMenuView {
         return value; // return the value entered
                
     }
-   
 
-    private boolean doAction(String choice) {
+ 
+
+    public boolean doAction(String choice) {
         //System.out.println("\n*** doAction() function called ***");
         //return true;
     //private boolean doAction(String playersName) {
@@ -115,26 +123,26 @@ public class HelpMenuView {
         choice = choice.toUpperCase();
         
         switch (choice) {
-        case "G": // what is your Quest?!
-            this.questDescription();
+        case "R": // To the roof!
+            this.ToDroof();
             break;
-        case "M": // how to move
-            this.happyFeet();
+        case "M": // Melaleuca
+            this.MelaMagic();
             break;
-        case "E": // collect Items
-            this.packrat();
+        case "S": // Sammy's 
+            this.PieShake();
             break;
-        case "H": // use items
-            this.userAndAbuser();
+        case "B": // The CoCoa Bean
+            this.CupCake();
             break;
-        case "D": // map locations
-            this.ImTheMapView();
+        case "K": // The Craze
+            this.LazerTag();
             break;
-        case "T": // temporary simulation of an interaction with an npc actor
-            this.ActorInteractionView();
+        case "C": // Cross Roads
+            this.PeopleWatching();
             break;
-        case "I": // temporary simulation of an interaction with an item
-            this.ItemInteractionView();
+        case "F": // Fight Club
+            this.FirstRule();
             break;
         default:
             System.out.println("\n*** Invalid selection *** Try again");
@@ -144,39 +152,34 @@ public class HelpMenuView {
     return false;
 }
 
-    private void questDescription() {
+    private void ToDroof() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void happyFeet() {
+    private void MelaMagic() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void packrat() {
+    private void PieShake() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void userAndAbuser() {
+    private void CupCake() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void ImTheMapView() {
-      ImTheMapView imTheMap = new ImTheMapView();
-        imTheMap.displayImTheMapView();
-    }
-/*
-    void displayHelpMenu() {
+    private void LazerTag() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-*/
 
-    private void ActorInteractionView() {
-        ActorInteractionView actorInteraction = new ActorInteractionView();
-        actorInteraction.displayActorInteractionView();
+    private void PeopleWatching() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void ItemInteractionView() {
-        ItemInteractionView itemInteraction = new ItemInteractionView();
-        itemInteraction.displayItemInteractionView();
+    private void FirstRule() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
 }
+
