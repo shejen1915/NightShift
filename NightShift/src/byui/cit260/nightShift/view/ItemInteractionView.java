@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Ni shi shei
  */
-public class ItemInteractionView {
+public class ItemInteractionView{
     /*
      private String menu;
      private String otherMenu;

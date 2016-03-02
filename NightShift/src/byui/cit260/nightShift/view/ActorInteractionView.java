@@ -11,12 +11,11 @@ import java.util.Scanner;
  *
  * @author Ni shi shei
  */
-public class ActorInteractionView {
-                private String menu;
+public class ActorInteractionView extends View {
    public ActorInteractionView() {
 
 
-        this.menu = "\n"
+        super("\n"
                 + "\n----------------------------------------"
                 + "\n| Actor Interaction Menu               |"
                 + "\n----------------------------------------"
@@ -24,9 +23,10 @@ public class ActorInteractionView {
                 + "\nC - Turn this person into a Companion   "
                 + "\nL - Leave companion                     "
                 + "\nG - Say Goodbye and leave conversation  "
-                + "\n----------------------------------------";
+                + "\n----------------------------------------");
     }
     
+/*
     public void displayActorInteractionView(){
         boolean done = false; //set flag to not done
         do{
@@ -62,12 +62,14 @@ public class ActorInteractionView {
         
         return value; // return the value entered
     }
+*/
 /*
     private boolean doAction(String actorInteraction) {
         System.out.println("\n*** doAction function called***");
         return true;
     }
 */
+/*
     public String getInput() {
         
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
@@ -91,12 +93,14 @@ public class ActorInteractionView {
         return value; // return the value entered
                
     }
-    
-    private boolean doAction(String choice) {
+*/
+   
+   @Override
+    public boolean doAction(String value) {
         
-        choice = choice.toUpperCase();
+        value = value.toUpperCase();
         
-        switch (choice) {
+        switch (value) {
             case "S": // start conversation unique to actor
                 this.startConversation();
                 break;

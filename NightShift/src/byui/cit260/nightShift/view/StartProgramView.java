@@ -85,17 +85,19 @@ public class StartProgramView {
         RETURN name
         */
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value to be returned
         boolean valid = false; // initialize to not valid
+        String value = ""; // value to be returned
         
         while (!valid) { // loop while an invalid value is entered
+            
+            // prompt for the player's name
             System.out.println("\n" + this.promptMessage);
             
             value = keyboard.nextLine(); // get next line typed on keyboard
             value = value.trim(); // trim off leading and trailing blanks
             
             if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid value: value cannot be blank");
+                System.out.println("\n*** Invalid value: value cannot be blank ***");
                 continue;
             }
             
@@ -153,7 +155,7 @@ public class StartProgramView {
         MainMenuView mainMenuView = new MainMenuView();
                 
         //Display the main menu view
-        mainMenuView.displayMainMenuView();
+        mainMenuView.display();
     }
     
 }

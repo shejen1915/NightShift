@@ -172,7 +172,7 @@ public class HelpMenuView {
 
     private void ActorInteractionView() {
         ActorInteractionView actorInteraction = new ActorInteractionView();
-        actorInteraction.displayActorInteractionView();
+        actorInteraction.display();
     }
 
     private void ItemInteractionView() {

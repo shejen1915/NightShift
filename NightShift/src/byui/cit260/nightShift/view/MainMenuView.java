@@ -13,12 +13,10 @@ import nightshift.NightShift;
  *
  * @author Ni shi shei
  */
-public class MainMenuView {
-
-    private String menu;
+public class MainMenuView extends View {
 
     public MainMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n----------------------------------------"
                 + "\n| Main Menu                            |"
                 + "\n----------------------------------------"
@@ -27,9 +25,9 @@ public class MainMenuView {
                 + "\nH - I Need Help!                        "
                 + "\nS - Take a Nap(Save)                    "
                 + "\nQ - I'm Out!(Quit)                      "
-                + "\n----------------------------------------";
+                + "\n----------------------------------------");
     }
-
+/*
     public void displayMainMenuView() {
             
     
@@ -68,7 +66,7 @@ public class MainMenuView {
         
         ENDWHILE
         RETURN name
-        */
+        
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
         String value = ""; // value to be returned
         boolean valid = false; // initialize to not valid
@@ -90,31 +88,13 @@ public class MainMenuView {
         return value; // return the value entered
                
     }
-   
-
-    public boolean doAction(String choice) {
-        //System.out.println("\n*** doAction() function called ***");
-        //return true;
-    //private boolean doAction(String playersName) {
-        // if the lenth of the playersName < 2 then 
-            // display "Invalid name: The name must be > 1 character"
-            // return false
-            
-        // create Player with specified name
-        // if unsuccessful then
-            // display "Invalid name: The name is too short"
-            // return false
-            // display next view
-            
-            
-        // display customized welcome message
-        // display mainMenuView        
-        // return true
+   */
+    @Override
+    public boolean doAction(String value) {
+     
+        value = value.toUpperCase(); // convert to all upper case
         
-        
-        choice = choice.toUpperCase();
-        
-        switch (choice) {
+        switch (value) {
         case "N": // create and start a new game
             this.startNewGame();
             break;
