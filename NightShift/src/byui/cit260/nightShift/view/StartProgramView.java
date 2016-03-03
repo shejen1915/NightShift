@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Ni shi shei
  */
     
-public class StartProgramView {
+public class StartProgramView extends View {
     
     private String promptMessage;
     
@@ -45,72 +45,9 @@ public class StartProgramView {
         );
     }
 
-    public void displayStartProgramView() {
-        /*
-        do
-            Prompt for and get the players name
-            if (playersName == "Q") then exit
-        
-            do the action and display the next view
-        while the action is not successful
-        */
-        boolean done = false; // set flag to not done
-        do {
-            // prompt for and get players name
-            String playersName = this.getPlayersName();
-            if (playersName.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            
-            // do the requested action and display the next view
-            done = this.doAction(playersName);
-            
-        } while (!done);
-    }
-
-    private String getPlayersName() {
-        /*
-        WHILE valid value has not been entered
-            DISPLAY promptMessage
-            GET the value entered from the keboard
-             Trim front and trailing blanks off of the name
-        
-            IF the length of the value is blank THEN
-                DISPLAY "Invalid value: The value cannot be blank"
-                CONTINUE
-            ENDIF
-        
-            BREAK
-        
-        ENDWHILE
-        RETURN name
-        */
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        boolean valid = false; // initialize to not valid
-        String value = ""; // value to be returned
-        
-        while (!valid) { // loop while an invalid value is entered
-            
-            // prompt for the player's name
-            System.out.println("\n" + this.promptMessage);
-            
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length() < 1) { // value is blank
-                System.out.println("\n*** Invalid value: value cannot be blank ***");
-                continue;
-            }
-            
-            break; // end the loop
-        }
-        
-        return value; // return the value entered
-        
-            
-        
-    }
-
-    private boolean doAction(String playersName) {
+    
+    @Override
+    public boolean doAction(String value) {
         // if the lenth of the playersName < 2 then 
             // display "Invalid name: The name must be > 1 character"
             // return false
@@ -126,14 +63,14 @@ public class StartProgramView {
         // display mainMenuView        
         // return true
         
-        if (playersName.length() < 2) {
+        if (value.length() < 2) {
             System.out.println("\nInvalid players name: " + 
                     "The name must be greater than one character in lenth");
             return false;
         }
         
         //call createPlayer() control function
-        Player player = GameControl.createPlayer(playersName);
+        Player player = GameControl.createPlayer(value);
         
         if (player == null) { // if unsuccessful
             System.out.println("\nError creating the player.");
