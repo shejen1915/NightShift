@@ -11,12 +11,12 @@ import java.util.Scanner;
  *
  * @author Ni shi shei
  */
-public class HelpMenuView {
-        private String menu;
-   public HelpMenuView() {
+public class HelpMenuView extends View {
+
+    public HelpMenuView() {
 
 
-        this.menu = "\n"
+        super("\n"
                 + "\n----------------------------------------"
                 + "\n| Help Menu                            |"
                 + "\n----------------------------------------"
@@ -27,10 +27,12 @@ public class HelpMenuView {
                 + "\nD - Map Locations                       "
                 + "\nT - Talk to NPC Actor simulation        "
                 + "\nI - Item interaction simulation         "
+                + "\nR - Return to Main Menu                 "
                 + "\nQ - I'm Out!(Quit)                      "
-                + "\n----------------------------------------";
+                + "\n----------------------------------------");
     }
 
+    /*
     public void displayHelpMenuView() {
 
         boolean done = false; // set flag to not done
@@ -68,7 +70,7 @@ public class HelpMenuView {
         
         ENDWHILE
         RETURN name
-        */
+        
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
         String value = ""; // value to be returned
         boolean valid = false; // initialize to not valid
@@ -90,9 +92,10 @@ public class HelpMenuView {
         return value; // return the value entered
                
     }
-   
-
-    private boolean doAction(String choice) {
+  */ 
+    
+    @Override
+    public boolean doAction(String value) {
         //System.out.println("\n*** doAction() function called ***");
         //return true;
     //private boolean doAction(String playersName) {
@@ -112,9 +115,9 @@ public class HelpMenuView {
         // return true
         
         
-        choice = choice.toUpperCase();
+        value = value.toUpperCase();
         
-        switch (choice) {
+        switch (value) {
         case "G": // what is your Quest?!
             this.questDescription();
             break;
@@ -136,6 +139,12 @@ public class HelpMenuView {
         case "I": // temporary simulation of an interaction with an item
             this.ItemInteractionView();
             break;
+        case "R": // R - Return to Main Menu
+            this.MainMenuView();
+            break;
+        case "Q": // Q - Quit (what will this do?)
+            this.MainMenuView();
+            break;
         default:
             System.out.println("\n*** Invalid selection *** Try again");
             break;
@@ -145,19 +154,24 @@ public class HelpMenuView {
 }
 
     private void questDescription() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n**** This is the Quest List function that you "
+                + "called ***");
     }
 
     private void happyFeet() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n**** This is the How To Move 'Happy Feet' function"
+                + " that you called ***");
     }
 
     private void packrat() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n**** This is the Collect Items 'Packrat' function "
+                + "that you called. I don't remember what we created it for ***");
     }
 
     private void userAndAbuser() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n**** This is the Use Items 'UserAndAbuser' "
+                + "function that you called. I'm not sure what we made this one"
+                + "for either ***");
     }
 
     private void ImTheMapView() {
@@ -177,6 +191,11 @@ public class HelpMenuView {
 
     private void ItemInteractionView() {
         ItemInteractionView itemInteraction = new ItemInteractionView();
-        itemInteraction.displayItemInteractionView();
+        itemInteraction.display();
+    }
+
+    private void MainMenuView() {
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.display();
     }
 }

@@ -11,14 +11,11 @@ import java.util.Scanner;
  *
  * @author Ni shi shei
  */
-public class ItemInteractionView{
-    /*
-     private String menu;
-     private String otherMenu;
-   public ItemInteractionView() {
+public class ItemInteractionView extends View {
+    
+        public ItemInteractionView(){
 
-
-        this.menu = "\n"
+        super("\n"
                 + "\n----------------------------------------"
                 + "\n|   Take-able Item Interaction Menu    |"
                 + "\n----------------------------------------"
@@ -26,9 +23,12 @@ public class ItemInteractionView{
                 + "\nI - see item Information                "
                 + "\nT - Take item and put in inventory      "
                 + "\nY - Use Item                            "
-                + "\nL - Leave menu                          "
-                + "\n----------------------------------------";
+                + "\nR - Return to Help Menu                 "
+                + "\n----------------------------------------");
+        }
         
+      /*
+  
         this.otherMenu = "\n"
                 + "\n----------------------------------------"
                 + "\n|   Untake-able Item Interaction Menu   "
@@ -39,7 +39,7 @@ public class ItemInteractionView{
                 + "\nL - Leave menu                          "
                 + "\n----------------------------------------";
     }
-    */
+    
        
         private String promptMessage;
 
@@ -82,6 +82,7 @@ public class ItemInteractionView{
         
         return value; // return the value entered
     }
+        */
 /*
     private boolean doAction(String itemInteraction) {
         System.out.println("\n*** doAction function called***");
@@ -113,7 +114,7 @@ public class ItemInteractionView{
                
     }
 */ 
-       private boolean doAction(String choice) {
+       public boolean doAction(String value) {
         //System.out.println("\n*** doAction() function called ***");
         //return true;
     //private boolean doAction(String playersName) {
@@ -133,9 +134,9 @@ public class ItemInteractionView{
         // return true
         
         
-        choice = choice.toUpperCase();
+        value = value.toUpperCase();
         
-        switch (choice) {
+        switch (value) {
         case "X": // what is your Quest?!
             this.itemInteraction();
             break;
@@ -147,6 +148,9 @@ public class ItemInteractionView{
             break;
         case "Y": // map locations
             this.useItem();
+            break;
+        case "R": // Return to Help Menu
+            this.HelpMenuView();
             break;
         default:
             System.out.println("\n*** Invalid selection *** Try again");
@@ -170,5 +174,10 @@ public class ItemInteractionView{
 
     private void useItem() {
         System.out.println("\n***useItem function called***");
+    }
+
+    private void HelpMenuView() {
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.display();
     }
 }
