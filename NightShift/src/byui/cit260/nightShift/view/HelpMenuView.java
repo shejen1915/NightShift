@@ -180,7 +180,7 @@ public class HelpMenuView extends View {
 
     private void ImTheMapView() {
       ImTheMapView imTheMap = new ImTheMapView();
-        imTheMap.displayImTheMapView();
+        imTheMap.display();
     }
 /*
     void displayHelpMenu() {

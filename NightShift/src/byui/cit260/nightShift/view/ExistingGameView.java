@@ -9,29 +9,11 @@ package byui.cit260.nightShift.view;
  *
  * @author Silver
  */
-public class ExistingGameView {
+public class ExistingGameView extends View{
 
-   public void displayExistingGames() {
-     
-       boolean done = false; // set flag to not done
-        do {
-            // prompt for and get players name
-            String existingGameOption = this.getExistingGameOption();
-            if (existingGameOption.toUpperCase().equals("G")) //user want previous
-                return; // exit the game
-            
 
-            // do the requested action and display the next view
-            done = this.doAction(existingGameOption);
-
-        } while (!done);
-    }
-
-    private String getExistingGameOption() {
-        System.out.println("\n*** getExistingGameOption() function called ***");
-       return "N";
-   }
-    private boolean doAction(String existingGameOption) { 
+    @Override
+    public boolean doAction(String value) { 
         System.out.println("\n*** doAction() function called ***)");
         return true;
     } }

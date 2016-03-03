@@ -89,7 +89,7 @@ public class EnterRoomView extends View{
 
     private void ImTheMapView() {
       ImTheMapView imTheMap = new ImTheMapView();
-        imTheMap.displayImTheMapView();
+        imTheMap.display();
     }
 
     private void MainMenuView() {
