@@ -27,6 +27,7 @@ public class HelpMenuView extends View {
                 + "\nD - Map Locations                       "
                 + "\nT - Talk to NPC Actor simulation        "
                 + "\nI - Item interaction simulation         "
+                + "\nA - Enter a Room simulation             "
                 + "\nR - Return to Main Menu                 "
                 + "\nQ - I'm Out!(Quit)                      "
                 + "\n----------------------------------------");
@@ -139,6 +140,9 @@ public class HelpMenuView extends View {
         case "I": // temporary simulation of an interaction with an item
             this.ItemInteractionView();
             break;
+        case "A": // temporary simulation of entering a room
+            this.EnterRoomView();
+            break;
         case "R": // R - Return to Main Menu
             this.MainMenuView();
             break;
@@ -197,5 +201,10 @@ public class HelpMenuView extends View {
     private void MainMenuView() {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
+    }
+
+    private void EnterRoomView() {
+        EnterRoomView enterRoom = new EnterRoomView();
+        enterRoom.display();
     }
 }

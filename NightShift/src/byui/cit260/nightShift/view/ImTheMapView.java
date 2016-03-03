@@ -35,7 +35,8 @@ public class ImTheMapView {
                 + "\nK - The Kraze                           "
                 + "\nC - The Cross Roads                     "
                 + "\nF - Fight Club                          "
-                + "\nQ - I'm Out!(Return)                      "
+                + "\nA - Return to Room Menu                 "
+                + "\nQ - I'm Out!(Return)                    "
                 + "\n----------------------------------------";
     }
 
@@ -144,6 +145,9 @@ public class ImTheMapView {
         case "F": // Fight Club
             this.FirstRule();
             break;
+        case "A": // return to Room Menu
+            this.EnterRoomView();
+            break;
         default:
             System.out.println("\n*** Invalid selection *** Try again");
             break;
@@ -178,6 +182,11 @@ public class ImTheMapView {
 
     private void FirstRule() {
             System.out.println("\n*** You have enterd the Fight Club function***");
+    }
+
+    private void EnterRoomView() {
+        EnterRoomView enterRoom = new EnterRoomView();
+        enterRoom.display();
     }
 
     
