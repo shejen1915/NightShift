@@ -162,7 +162,7 @@ public class HelpMenuView {
 
     private void ImTheMapView() {
       ImTheMapView imTheMap = new ImTheMapView();
-        imTheMap.displayImTheMapView();
+        imTheMap.display();
     }
 /*
     void displayHelpMenu() {
