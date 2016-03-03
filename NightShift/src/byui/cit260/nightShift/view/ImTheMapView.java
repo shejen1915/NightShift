@@ -153,31 +153,31 @@ public class ImTheMapView {
 }
 
     private void ToDroof() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            System.out.println("\n*** You have enter the roof function ***");
     }
 
     private void MelaMagic() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            System.out.println("\n*** You have entered the Melaleuca function***");
     }
 
     private void PieShake() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            System.out.println("\n*** You have entered the Sammy's function***");
     }
 
     private void CupCake() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            System.out.println("\n*** You have entered the Cocoa Bean function***");
     }
 
     private void LazerTag() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            System.out.println("\n*** You have entered The Kraze function***");
     }
 
     private void PeopleWatching() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            System.out.println("\n*** You have entered the Cross Roads function***");
     }
 
     private void FirstRule() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            System.out.println("\n*** You have enterd the Fight Club function***");
     }
 
     

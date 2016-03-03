@@ -147,7 +147,7 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** Save Game funciton has been called***");
     }
 
     private static class ExistingGameview extends ExistingGameView {

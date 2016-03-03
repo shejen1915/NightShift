@@ -136,7 +136,10 @@ public class ActorInteractionView extends View {
 
     private void leaveConversation() {
            
-        System.out.println("\n *** leaveConversation function has been called***");
+        System.out.println("\n *** leaveConversation and go to GamePlay "
+                + "function has been called***");
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void dropCompanion() {

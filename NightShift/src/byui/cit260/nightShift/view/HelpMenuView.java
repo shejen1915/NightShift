@@ -142,6 +142,9 @@ public class HelpMenuView extends View {
         case "R": // R - Return to Main Menu
             this.MainMenuView();
             break;
+        case "Q": // Q - Quit (what will this do?)
+            this.MainMenuView();
+            break;
         default:
             System.out.println("\n*** Invalid selection *** Try again");
             break;
@@ -151,19 +154,24 @@ public class HelpMenuView extends View {
 }
 
     private void questDescription() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n**** This is the Quest List function that you "
+                + "called ***");
     }
 
     private void happyFeet() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n**** This is the How To Move 'Happy Feet' function"
+                + " that you called ***");
     }
 
     private void packrat() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n**** This is the Collect Items 'Packrat' function "
+                + "that you called. I don't remember what we created it for ***");
     }
 
     private void userAndAbuser() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n**** This is the Use Items 'UserAndAbuser' "
+                + "function that you called. I'm not sure what we made this one"
+                + "for either ***");
     }
 
     private void ImTheMapView() {
