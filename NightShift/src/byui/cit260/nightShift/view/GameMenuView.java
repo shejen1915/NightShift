@@ -9,8 +9,26 @@ package byui.cit260.nightShift.view;
  *
  * @author Ni shi shei
  */
-public class GameMenuView {
+public class GameMenuView extends View {
+    
+    public GameMenuView() {
+        super("\n"
+                + "\n-----------------------------"
+                + "\n| Game Menu                 |"
+                + "\n-----------------------------"
+                + "\n This is the Game Mneu");
+    }
+    
+    /*
     void displayMenu() {
         System.out.println("\n*** displayMenu stub function called ***");
     }
+*/
+    @Override
+    public boolean doAction(String value) {
+        value = value.toUpperCase(); //convert to all upper case
+        
+        return false;
+    }
+    
 }

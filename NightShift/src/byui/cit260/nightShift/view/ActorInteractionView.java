@@ -21,8 +21,9 @@ public class ActorInteractionView extends View {
                 + "\n----------------------------------------"
                 + "\nS - Start a conversation                "
                 + "\nC - Turn this person into a Companion   "
-                + "\nL - Leave companion                     "
-                + "\nG - Say Goodbye and leave conversation  "
+                + "\nD - Drop companion                      "
+                + "\nR - Return to Help Menu                 "
+                + "\nG - Say Goodbye and return to Gameplay  "
                 + "\n----------------------------------------");
     }
     
@@ -107,8 +108,11 @@ public class ActorInteractionView extends View {
             case "C": // have actor join you as a companion
                 this.joinCompanion();
                 break;
-            case "L": // leave companion
-                this.leaveCompanion();
+            case "D": // leave companion
+                this.dropCompanion();
+                break;
+            case "R": // Return to Help Menu
+                this.HelpMenuView();
                 break;
             case "G": // say goodbye and leave conversation
                 this.leaveConversation();
@@ -135,8 +139,13 @@ public class ActorInteractionView extends View {
         System.out.println("\n *** leaveConversation function has been called***");
     }
 
-    private void leaveCompanion() {
-        System.out.println("\n*** leaveCompanion function called***");
+    private void dropCompanion() {
+        System.out.println("\n*** dropCompanion function called***");
+    }
+
+    private void HelpMenuView() {
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.display();
     }
     
 }
