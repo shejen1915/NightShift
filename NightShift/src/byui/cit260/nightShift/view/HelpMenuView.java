@@ -207,4 +207,9 @@ public class HelpMenuView extends View {
         EnterRoomView enterRoom = new EnterRoomView();
         enterRoom.display();
     }
+      private void InventoryView() {
+      InventoryView inventory= new InventoryView();
+      inventory.display();
+    }
+
 }
