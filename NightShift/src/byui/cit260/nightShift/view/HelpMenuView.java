@@ -28,7 +28,6 @@ public class HelpMenuView extends View {
                 + "\nT - Talk to NPC Actor simulation        "
                 + "\nI - Item interaction simulation         "
                 + "\nA - Enter a Room simulation             "
-                + "\nR - Return to Main Menu                 "
                 + "\nQ - I'm Out!(Quit)                      "
                 + "\n----------------------------------------");
     }
@@ -142,9 +141,6 @@ public class HelpMenuView extends View {
             break;
         case "A": // temporary simulation of entering a room
             this.EnterRoomView();
-            break;
-        case "R": // R - Return to Main Menu
-            this.MainMenuView();
             break;
         case "Q": // Q - Quit (what will this do?)
             this.MainMenuView();

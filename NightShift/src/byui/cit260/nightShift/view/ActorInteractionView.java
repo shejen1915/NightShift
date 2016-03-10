@@ -22,7 +22,7 @@ public class ActorInteractionView extends View {
                 + "\nS - Start a conversation                "
                 + "\nC - Turn this person into a Companion   "
                 + "\nD - Drop companion                      "
-                + "\nR - Return to Help Menu                 "
+                + "\nQ - Return to Help Menu                 "
                 + "\nG - Say Goodbye and return to Gameplay  "
                 + "\n----------------------------------------");
     }
@@ -111,7 +111,7 @@ public class ActorInteractionView extends View {
             case "D": // leave companion
                 this.dropCompanion();
                 break;
-            case "R": // Return to Help Menu
+            case "Q": // Return to Help Menu
                 this.HelpMenuView();
                 break;
             case "G": // say goodbye and leave conversation
