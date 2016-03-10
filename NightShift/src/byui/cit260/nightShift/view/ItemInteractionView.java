@@ -23,7 +23,7 @@ public class ItemInteractionView extends View {
                 + "\nI - see item Information                "
                 + "\nT - Take item and put in inventory      "
                 + "\nY - Use Item                            "
-                + "\nR - Return to Help Menu                 "
+                + "\nQ - Return to Help Menu                 "
                 + "\n----------------------------------------");
         }
         
@@ -149,7 +149,7 @@ public class ItemInteractionView extends View {
         case "Y": // map locations
             this.useItem();
             break;
-        case "R": // Return to Help Menu
+        case "Q": // Return to Help Menu
             this.HelpMenuView();
             break;
         default:

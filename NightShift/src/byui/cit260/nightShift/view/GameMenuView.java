@@ -17,7 +17,7 @@ public class GameMenuView extends View {
                 + "\n| Game Menu                 |"
                 + "\n-----------------------------"
                 + "\n This is the Game Menu       "
-                + "\n R - Return to Main Menu     ");
+                + "\n Q - Return to Main Menu     ");
     }
     
     /*
@@ -32,7 +32,7 @@ public class GameMenuView extends View {
         value = value.toUpperCase();
         
         switch (value) {
-        case "R": // R - Return to Main Menu
+        case "Q": // R - Return to Main Menu
             this.MainMenuView();
             break;
             default:

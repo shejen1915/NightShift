@@ -56,7 +56,7 @@ public class EnterRoomView extends View{
         case "M": // go to Main Menu
             this.MainMenuView();
             break;
-        case "Q": // Q - Quit (what will this do? for now it goes to Main Menu)
+        case "Q": // Q - Quit (what will this do? return to gameplay? for now it goes to Main Menu)
             this.MainMenuView();
             break;
         default:

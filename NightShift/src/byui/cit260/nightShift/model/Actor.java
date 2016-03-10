@@ -12,18 +12,39 @@ import java.util.Objects;
  *
  * @author Ni shi shei
  */
-public class Actor implements Serializable{
+public enum Actor implements Serializable{
     
-    private String name;
-    private String description;
-    private String startLocation;
-    private String conversation;
-    private double interactionBonus;
-    private double interactionPenalty;
+    OldJoe("Old Joe."),
+    CleaningLady("A cleaning lady."),
+    Doofus25("A Doofus"),
+    KyleTheDragonSlayer("Kyle"),
+    CocoaBeanClerk("Cocoa Bean clerk."),
+    Guy("A Guy."),
+    Dude("A dude."),
+    Man("A man."),
+    AmandaHugginKiss("a man to hug and kiss."),
+    Seamor("Seamor"),
+    KevinVanNord("Hero!!"),
+    Minion("a minion"),
+    Hippy("Herb sells herbs"),
+    Bruce("Jenner"),
+    Caitlin("Jenner"),
+    Brutus("Hungarian Vampire"),
+    Vlad("Romanian Vampire"),
+    KeyserSoza("Mob Boss");
+    
+    
+    //private String name;
+    private final String description;
+    private final Point startLocation;
+    private final String conversation;
+    private final double interactionBonus;
+    private final double interactionPenalty;
 
-    public Actor() {
+    private Actor() {
     }
 
+/*
     public String getName() {
         return name;
     }
@@ -31,43 +52,42 @@ public class Actor implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
-
+*/
     public String getDescription() {
         return description;
     }
-
+/*
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public String getStartLocation() {
+*/
+    public Point getStartLocation() {
         return startLocation;
     }
-
-    public void setStartLocation(String startLocation) {
+/*ublic void setStartLocation(Point startLocation) {
         this.startLocation = startLocation;
     }
-
+*/
     public String getConversation() {
         return conversation;
     }
-
+/*
     public void setConversation(String conversation) {
         this.conversation = conversation;
     }
-
+*/
     public double getInteractionBonus() {
         return interactionBonus;
     }
-
+/*
     public void setInteractionBonus(double interactionBonus) {
         this.interactionBonus = interactionBonus;
     }
-
+*/
     public double getInteractionPenalty() {
         return interactionPenalty;
     }
-
+/*
     public void setInteractionPenalty(double interactionPenalty) {
         this.interactionPenalty = interactionPenalty;
     }
@@ -116,7 +136,7 @@ public class Actor implements Serializable{
         }
         return true;
     }
-
+*/
     @Override
     public String toString() {
         return "Actor{" + "name=" + name + ", description=" + description + ", startLocation=" + startLocation + ", conversation=" + conversation + ", interactionBonus=" + interactionBonus + ", interactionPenalty=" + interactionPenalty + '}';
