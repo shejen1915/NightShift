@@ -8,8 +8,7 @@ package byui.cit260.nightShift.view;
 /**
  *
  * @author Silver
- */
-public class InventoryView extends View{
+ */public class InventoryView extends View{
 
     public InventoryView() {
            super("\n"
