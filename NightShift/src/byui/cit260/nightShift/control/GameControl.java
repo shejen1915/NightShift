@@ -5,6 +5,7 @@
  */
 package byui.cit260.nightShift.control;
 
+import byui.cit260.nightShift.model.InventoryItem;
 import byui.cit260.nightShift.model.Player;
 import nightshift.NightShift;
 
@@ -45,6 +46,11 @@ public class GameControl {
         NightShift.setPlayer(player); // save the player
         
         return player;
+    }
+
+    private static InventoryItem[] createInventoryList() {
+        System.out.println("*** called createInventoryList() in GameControl ***");
+        return null;
     }
    
 }
