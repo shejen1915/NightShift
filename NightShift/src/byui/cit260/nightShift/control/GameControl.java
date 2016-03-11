@@ -15,7 +15,22 @@ import nightshift.NightShift;
 public class GameControl {
     
     public static void createNewGame (Player player) {
-        System.out.println("\n*** createNewGame stub function called ***");
+        //System.out.println("\n*** createNewGame stub function called ***");
+        
+        Game game = new Game(); //create new game
+        NightShift.setCurrentGame(game); // save in NightShift
+        
+        game.setPlayer(player); // save player in game
+        
+        //create the inventory list and save in the game
+        InventoryItem[] inventoryList = GameControl.createInventoryList();
+        game.setInventory(inventoryList);
+        
+        Map map = MapControl.createMap(); // create and initialize new Map
+        game.setMap(map); // save map in game
+        
+        // move actors to starting position in the map
+        MapControl.moveActorToStartingLocation(map);
     }
     
 
