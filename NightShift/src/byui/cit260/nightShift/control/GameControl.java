@@ -27,6 +27,12 @@ public class GameControl {
         InventoryItem[] inventoryList = GameControl.createInventoryList();
         game.setInventory(inventoryList);
         
+        Pillar pillar = new Pillar(); // create new pillar
+        game.setPillar(pillar); // save pillar in game
+        
+        Window window = new Window(); // create new window
+        game.setWindow(window); // save window in game
+        
         Map map = MapControl.createMap(); // create and initialize new Map
         game.setMap(map); // save map in game
         
@@ -49,8 +55,29 @@ public class GameControl {
     }
 
     private static InventoryItem[] createInventoryList() {
-        System.out.println("*** called createInventoryList() in GameControl ***");
-        return null;
+        // created array(list) of inventory items
+        InventoryItem[] inventory =
+            new InventoryItem[3];
+        
+        InventoryItem charm = new InventoryItem();
+        charm.setDescription("Charm");
+        charm.setQuantityInStock(0);
+        charm.setRequiredAmount(0);
+        inventory[Item.charm.ordinal()] = charm;
+        
+        InventoryItem weapon = new InventoryItem();
+        weapon.setDescription("Weapon");
+        weapon.setQuanityInStock(0);
+        weapon.setRequiredAmount(0);
+        inventory[Item.weapon.ordinal()] = weapon;
+        
+        InventoryItem special = new InventoryItem();
+        special.setDescription("Special Item");
+        special.setQuantityInStock(0);
+        special.setRequiredAmount(0);
+        inventory[Item.special.ordinal()] = special;
+        
+        return inventory;
     }
    
 }
