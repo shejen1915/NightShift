@@ -35,6 +35,9 @@ public class GameMenuView extends View {
         value = value.toUpperCase();
         
         switch (value) {
+        case "V": // Travel to new location
+            this.ImTheMapView();
+            break;
         case "Q": // R - Return to Main Menu
             this.MainMenuView();
             break;
@@ -70,6 +73,10 @@ public class GameMenuView extends View {
                                inventoryItem.getRequiredAmount()+ "\t" +
                                inventoryItem.getQuantityInStock());
         }
+    }
+
+    private void ImTheMapView() {
+     System.out.println("*** ImTheMapView stub function called ***");
     }
     
 }
