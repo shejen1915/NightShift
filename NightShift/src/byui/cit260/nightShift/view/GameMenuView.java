@@ -5,6 +5,9 @@
  */
 package byui.cit260.nightShift.view;
 
+import byui.cit260.nightShift.control.GameControl;
+import byui.cit260.nightShift.model.InventoryItem;
+
 /**
  *
  * @author Ni shi shei
@@ -35,6 +38,9 @@ public class GameMenuView extends View {
         case "Q": // R - Return to Main Menu
             this.MainMenuView();
             break;
+        case "I": // I - Show me them items
+            this.InventoryView();
+            break;
             default:
             System.out.println("\n*** Invalid selection *** Try again");
             break;
@@ -47,5 +53,22 @@ public class GameMenuView extends View {
     private void MainMenuView() {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
+    }
+
+    private void InventoryView() {
+        // get the sorted list of inventory items for the current game
+        InventoryItem[] inventory = GameControl.getSortedInventoryList();
+       
+        System.out.println("\nList of Inventory");
+        System.out.println("Description" + "\t" +
+                            "Required" + "\t" +
+                            "In Stock");
+        // for each inventory item
+        for (InventoryItem inventoryItem : inventory ) {
+            //DISPLAY the description, the required amount and amount in stock
+            System.out.println(inventoryItem.getDescription()+ "\t " +
+                               inventoryItem.getRequiredAmount()+ "\t" +
+                               inventoryItem.getQuantityInStock());
+        }
     }
 }
