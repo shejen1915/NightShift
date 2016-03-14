@@ -40,6 +40,6 @@ finishScene.setBlocked(false);
 finishScene.setTravelTime(Double.POSITIVE_INFINITY);
 scenes[SceneType.finish.ordinal()] = finishScene;
 
-
+return null;
 }
 }
