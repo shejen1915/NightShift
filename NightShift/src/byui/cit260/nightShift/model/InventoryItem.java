@@ -14,6 +14,12 @@ import java.util.Objects;
  */
 public class InventoryItem implements Serializable{
     
+    public enum Item {
+        charm,
+        weapon,
+        special;
+    }
+    
     private String itemName;
     private String inventoryType;
     private String equipStatus;
