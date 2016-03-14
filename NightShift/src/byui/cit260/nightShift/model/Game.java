@@ -19,6 +19,7 @@ public class Game implements Serializable{
     private String[] actor;
     private Map map;
     private InventoryItem[] inventory;
+    private Scenes[] scene;
 
     public Game() {
     }
