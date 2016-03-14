@@ -11,15 +11,15 @@ package byui.cit260.nightShift.control;
  */
 public class MapControl {
     
-    public static Map createMap() {
+    private static Map createMap() {
         // create the map
-        Map map = Map(20, 20);
+        Map map = new Map(20, 20);
         
         // create a list of the differet scenes in the game
         Scene[] scenes = createScenes();
         
         //assign the different scenes to locations in the map
-        assignScenesToLocation(map, scenes);
+        GameControl.assignScenesToLocation(map, scenes);
         
         return map;
-}
+}}
