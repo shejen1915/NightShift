@@ -79,5 +79,10 @@ public class GameControl {
         
         return inventory;
     }
+
+    public static InventoryItem[] getSortedInventoryList() {
+    System.out.println("\n*** getSortedInventoryList stub function called ***");
+    return null;
+    }
    
 }
