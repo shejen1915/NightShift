@@ -6,7 +6,9 @@
 package byui.cit260.nightShift.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
+import javafx.scene.Scene;
 
 /**
  *
@@ -19,6 +21,8 @@ public class Location implements Serializable{
    private String room;
    private String visited;
    private String itemsRemaining;
+   private Scene scene;
+   private ArrayList<Actor> actor;
 
     public Location() {
     }
@@ -100,6 +104,15 @@ public class Location implements Serializable{
         this.itemsRemaining = itemsRemaining;
     }
    
+    private static void assigScenesToLocations(Map map, Scene[] scenes) {
+        Location[][] location = map.getLocations();
+        
+        //start point
+        location[0][0].setScene(scenes[SceneType.start.ordinal()]);
+        location[0][0].setScene(scenes[SceneType.roof.ordinal()]);
+        location[0][0].setScene(scenes[SceneType.basement.ordinal()]);
+        location[0][0].setScene(scenes[SceneType.decraze.ordinal()]);
+    }
    
     
 }

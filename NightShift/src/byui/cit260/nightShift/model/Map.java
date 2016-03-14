@@ -15,10 +15,12 @@ public class Map implements Serializable{
     
     private double floorNumber;
     private double roomNumber;
+    private Location[][] location;
 
     public Map() {
     }
     
+   
     public double getFloorNumber() {
         return floorNumber;
     }

@@ -16,9 +16,10 @@ public class Game implements Serializable{
     private double score;
     private double startTime;
     private Player player;
-    private Actor actor;
+    private String[] actor;
     private Map map;
-    private InventoryItem inventoryItem;
+    private InventoryItem[] inventory;
+    private Scenes[] scene;
 
     public Game() {
     }
