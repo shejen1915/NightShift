@@ -20,9 +20,9 @@ public class Map implements Serializable{
     public Map() {
     }
     
-    public Map(int roomNumber) {
+    public Map(int floorNumber, int roomNumber) {
         if (floorNumber < 1 || roomNumber < 1) {
-            System.out.println("Room number and floor number must be greater than zero");
+            System.out.println("\nFloor number and room number must be greater than zero");
             return;
         }
         
@@ -33,6 +33,7 @@ public class Map implements Serializable{
         this.locations = new Location[floorNumber][roomNumber];
         
         for (int floor = 0; floor < floorNumber; floor++) {
+            for(int room = 0; room < roomNumber; room++) {
             // create and initialize new Location object instance
             Location location = new Location();
             location.setRoom(room);
@@ -41,25 +42,41 @@ public class Map implements Serializable{
             
             // assign the Location object to the current position in array
             locations[floor][room] = location;
+            }
         }
     }
-   
-    public double getFloorNumber() {
+/*
+    public Map(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+*/
+    public int getFloorNumber() {
         return floorNumber;
     }
 
-    public void setFloorNumber(double floorNumber) {
+    public void setFloorNumber(int floorNumber) {
         this.floorNumber = floorNumber;
     }
 
-    public double getRoomNumber() {
+    public int getRoomNumber() {
         return roomNumber;
     }
 
-    public void setRoomNumber(double roomNumber) {
+    public void setRoomNumber(int roomNumber) {
         this.roomNumber = roomNumber;
     }
 
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
+   
+
+    
+    
     @Override
     public int hashCode() {
         int hash = 5;

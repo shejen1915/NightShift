@@ -5,8 +5,14 @@
  */
 package byui.cit260.nightShift.control;
 
+import byui.cit260.nightShift.model.Game;
 import byui.cit260.nightShift.model.InventoryItem;
+import byui.cit260.nightShift.model.InventoryItem.Item;
+import byui.cit260.nightShift.model.Map;
+import byui.cit260.nightShift.model.Pillar;
 import byui.cit260.nightShift.model.Player;
+import byui.cit260.nightShift.model.RegularScene;
+import byui.cit260.nightShift.model.Window;
 import nightshift.NightShift;
 
 /**
@@ -78,6 +84,14 @@ public class GameControl {
         inventory[Item.special.ordinal()] = special;
         
         return inventory;
+    }
+
+    static void assignScenesToLocation(Map map, RegularScene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static InventoryItem[] getSortedInventoryList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
    
 }

@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author Ni shi shei
  */
-public enum Actor implements Serializable{
+public enum Actor implements Serializable {
     
     OldJoe("Old Joe."),
     CleaningLady("A cleaning lady."),
@@ -35,6 +35,7 @@ public enum Actor implements Serializable{
     
     
     //private String name;
+    private final String name;
     private final String description;
     private final Point startLocation;
     private final String conversation;

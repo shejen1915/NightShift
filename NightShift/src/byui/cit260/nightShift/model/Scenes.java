@@ -5,25 +5,34 @@
  */
 package byui.cit260.nightShift.model;
 
+import nightshift.NightShift;
+
 /**
  *
  * @author Silver
  */
+public enum SceneType {
+start,
+roof,
+basement,
+decraze,
+finish;
+
 public static Scenes[] createScenes() {
-    Game game = nightShift.getCurrentGame();
+    Game game = NightShift.getCurrentGame();
 
-Scene[] scenes = new Scene[SceneType.value().length];
+Scenes[] scenes = new Scenes[SceneType.values().length];
 
-Scene startingSence = new Scene();
+Scenes startingScene = new Scenes();
 startingScene.setDescription(
-            "\nYou are walking to a new area, whenyou see him,"
+            "\nYou are walking to a new area, when you see him,"
            + "quickly run as");
 startingScene.setMapSymbol("ST");
 startingScene.setBlocked(false);
 startingScene.setTravelTime(240);
-scene[SceneType.start.ordinal()] = startingScene;
+scenes[SceneType.start.ordinal()] = startingScene;
 
-Scene finishScene = new Scene();
+Scenes finishScene = new Scenes();
 finishScene.setDescription(
                 "\nAmazing! Time to take a nap");
 finishScene.setMapSymbol("FN");
@@ -31,9 +40,6 @@ finishScene.setBlocked(false);
 finishScene.setTravelTime(Double.POSITIVE_INFINITY);
 scenes[SceneType.finish.ordinal()] = finishScene;
 
-public enum SceneType {
-start,
-roof,
-basement,
+
 }
 }

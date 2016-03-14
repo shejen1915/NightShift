@@ -22,7 +22,7 @@ public class Location implements Serializable{
    private String visited;
    private String itemsRemaining;
    private Scene scene;
-   private ArrayList<Actor> actor;
+   private ArrayList<Actor> actors;
 
     public Location() {
     }
@@ -103,6 +103,24 @@ public class Location implements Serializable{
     public void setItemsRemaining(String itemsRemaining) {
         this.itemsRemaining = itemsRemaining;
     }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public ArrayList<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(ArrayList<Actor> actors) {
+        this.actors = actors;
+    }
+    
+    
    
     private static void assigScenesToLocations(Map map, Scene[] scenes) {
         Location[][] location = map.getLocations();
