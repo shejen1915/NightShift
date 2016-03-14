@@ -5,6 +5,8 @@
  */
 package byui.cit260.nightShift.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Ni shi shei
