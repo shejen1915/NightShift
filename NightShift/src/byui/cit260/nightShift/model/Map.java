@@ -13,13 +13,36 @@ import java.io.Serializable;
  */
 public class Map implements Serializable{
     
-    private double floorNumber;
-    private double roomNumber;
-    private Location[][] location;
+    private int floorNumber;
+    private int roomNumber;
+    private Location[][] locations;
 
     public Map() {
     }
     
+    public Map(int roomNumber) {
+        if (floorNumber < 1 || roomNumber < 1) {
+            System.out.println("Room number and floor number must be greater than zero");
+            return;
+        }
+        
+        this.floorNumber = floorNumber;
+        this.roomNumber = roomNumber;
+        
+        // create a 2-D array for Location objects
+        this.locations = new Location[floorNumber][roomNumber];
+        
+        for (int floor = 0; floor < floorNumber; floor++) {
+            // create and initialize new Location object instance
+            Location location = new Location();
+            location.setRoom(room);
+            location.setFloor(floor);
+            location.setVisited(false);
+            
+            // assign the Location object to the current position in array
+            locations[floor][room] = location;
+        }
+    }
    
     public double getFloorNumber() {
         return floorNumber;
