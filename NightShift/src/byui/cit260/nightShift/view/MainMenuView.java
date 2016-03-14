@@ -155,7 +155,7 @@ public class MainMenuView extends View {
         public ExistingGameview() {
         }
     }
-        
+    
     }
 /*
             private void displayNextView(Player player) {
