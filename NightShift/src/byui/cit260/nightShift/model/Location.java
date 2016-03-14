@@ -104,6 +104,15 @@ public class Location implements Serializable{
         this.itemsRemaining = itemsRemaining;
     }
    
+    private static void assigScenesToLocations(Map map, Scene[] scenes) {
+        Location[][] location = map.getLocations();
+        
+        //start point
+        location[0][0].setScene(scenes[SceneType.start.ordinal()]);
+        location[0][0].setScene(scenes[SceneType.roof.ordinal()]);
+        location[0][0].setScene(scenes[SceneType.basement.ordinal()]);
+        location[0][0].setScene(scenes[SceneType.decraze.ordinal()]);
+    }
    
     
 }
