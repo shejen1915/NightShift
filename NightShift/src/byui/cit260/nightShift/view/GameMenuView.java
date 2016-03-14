@@ -71,4 +71,5 @@ public class GameMenuView extends View {
                                inventoryItem.getQuantityInStock());
         }
     }
+    
 }
