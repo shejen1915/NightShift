@@ -44,6 +44,9 @@ public class GameMenuView extends View {
         case "I": // I - Show me them items
             this.InventoryView();
             break;
+            case "C": // I - Show me them items
+            this.QuestCompleted();
+            break;
             default:
             System.out.println("\n*** Invalid selection *** Try again");
             break;
@@ -76,6 +79,9 @@ public class GameMenuView extends View {
     }
 
     private void ImTheMapView() {
+     System.out.println("*** ImTheMapView stub function called ***");
+    }
+     private void QuestCompleted() {
      System.out.println("*** ImTheMapView stub function called ***");
     }
     
