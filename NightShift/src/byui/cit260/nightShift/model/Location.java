@@ -131,6 +131,18 @@ public class Location implements Serializable{
         location[0][0].setScene(scenes[SceneType.basement.ordinal()]);
         location[0][0].setScene(scenes[SceneType.decraze.ordinal()]);
     }
+
+    void setRoom(int room) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void setFloor(int floor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void setVisited(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
    
     
 }
