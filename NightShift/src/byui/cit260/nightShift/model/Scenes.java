@@ -5,41 +5,30 @@
  */
 package byui.cit260.nightShift.model;
 
-import nightshift.NightShift;
-
 /**
  *
  * @author Silver
  */
-public enum SceneType {
-start,
-roof,
-basement,
-decraze,
-finish;
+class Scenes {
 
-public static Scenes[] createScenes() {
-    Game game = NightShift.getCurrentGame();
+    void setDescription(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
-Scenes[] scenes = new Scenes[SceneType.values().length];
+    void setMapSymbol(String st) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
-Scenes startingScene = new Scenes();
-startingScene.setDescription(
-            "\nYou are walking to a new area, when you see him,"
-           + "quickly run as");
-startingScene.setMapSymbol("ST");
-startingScene.setBlocked(false);
-startingScene.setTravelTime(240);
-scenes[SceneType.start.ordinal()] = startingScene;
+    void setBlocked(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
-Scenes finishScene = new Scenes();
-finishScene.setDescription(
-                "\nAmazing! Time to take a nap");
-finishScene.setMapSymbol("FN");
-finishScene.setBlocked(false);
-finishScene.setTravelTime(Double.POSITIVE_INFINITY);
-scenes[SceneType.finish.ordinal()] = finishScene;
+    void setTravelTime(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
-return null;
-}
+    void setTravelTime(double POSITIVE_INFINITY) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }
