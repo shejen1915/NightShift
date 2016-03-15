@@ -5,6 +5,7 @@
  */
 package byui.cit260.nightShift.view;
 
+import byui.cit260.nightShift.control.InventorySort;
 import java.util.Scanner;
 
 /**
@@ -28,6 +29,7 @@ public class HelpMenuView extends View {
                 + "\nT - Talk to NPC Actor simulation        "
                 + "\nI - Item interaction simulation         "
                 + "\nA - Enter a Room simulation             "
+                + "\nB - Run InventorySort simulation        "
                 + "\nQ - I'm Out!(Quit)                      "
                 + "\n----------------------------------------");
     }
@@ -142,6 +144,9 @@ public class HelpMenuView extends View {
         case "A": // temporary simulation of entering a room
             this.EnterRoomView();
             break;
+        case "B": // temporary simulation of InventorySort()
+            this.InventorySort();
+            break;
         case "Q": // Q - Quit (what will this do?)
             this.MainMenuView();
             break;
@@ -206,6 +211,11 @@ public class HelpMenuView extends View {
       private void InventoryView() {
       InventoryView inventory= new InventoryView();
       inventory.display();
+    }
+
+    private void InventorySort() {
+        InventorySort inventorySort = new InventorySort();
+        inventorySort.display();
     }
 
 }

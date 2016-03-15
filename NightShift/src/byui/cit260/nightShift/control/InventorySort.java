@@ -24,7 +24,7 @@ public class InventorySort {
         return sorted;
     }
     
-    public static void main(String[] args) {
+    public static void InventoryItem(String[] args) {
         String s1 = "Hello";
         String s2 = "charm";
         String s3 = "special item";
@@ -35,5 +35,9 @@ public class InventorySort {
         System.out.println(sortString(s3));
         System.out.println(sortString(s4));
 
+    }
+
+    public void display() {
+        System.out.println("\n you just called the InventorySort function");
     }
 }
