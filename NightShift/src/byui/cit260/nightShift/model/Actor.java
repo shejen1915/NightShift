@@ -14,35 +14,36 @@ import java.util.Objects;
  */
 public enum Actor implements Serializable {
     
-    OldJoe("Old Joe."),
-    CleaningLady("A cleaning lady."),
-    Doofus25("A Doofus"),
-    KyleTheDragonSlayer("Kyle"),
-    CocoaBeanClerk("Cocoa Bean clerk."),
-    Guy("A Guy."),
-    Dude("A dude."),
-    Man("A man."),
-    AmandaHugginKiss("a man to hug and kiss."),
-    Seamor("Seamor"),
-    KevinVanNord("Hero!!"),
-    Minion("a minion"),
-    Hippy("Herb sells herbs"),
-    Bruce("Jenner"),
-    Caitlin("Jenner"),
-    Brutus("Hungarian Vampire"),
-    Vlad("Romanian Vampire"),
-    KeyserSoza("Mob Boss");
+    OldJoe("He is your mentor"),
+    CleaningLady("Love Interest"),
+    GuyFromRoom6("Creeper"),
+    KyleTheIntern("KyleTheDragonSlayer!"),
+    CocoaBeanClerk("Wants Change Not Money"),
+    Daniel("Dang Daniel!"),
+    Dude("Radical!"),
+    It("Don't question the gender"),
+    AmandaHugginKiss("In love with you"),
+    Seamor("The Earl"),
+    KevinVanNord("Model"),
+    Minion("Banana"),
+    Hippy("Free the potatas!"),
+    BruceTheDog("Cats are friends not food"),
+    Caitlin("A spunky loud mouth"),
+    Brutus("He is trying to steal stuff"),
+    Vlad("He never sleeps"),
+    KeyserSoza("Fashionista from India");
     
     
     //private String name;
-    private final String name;
     private final String description;
     private final Point startLocation;
-    private final String conversation;
+   /* private final String conversation;
     private final double interactionBonus;
-    private final double interactionPenalty;
+    private final double interactionPenalty;*/
 
-    private Actor() {
+    private Actor(String description) {
+        this.description = description;
+        startLocation = new Point(1,1);
     }
 
 /*
@@ -69,25 +70,25 @@ public enum Actor implements Serializable {
         this.startLocation = startLocation;
     }
 */
-    public String getConversation() {
+  /*  public String getConversation() {
         return conversation;
-    }
+    }*/
 /*
     public void setConversation(String conversation) {
         this.conversation = conversation;
     }
 */
-    public double getInteractionBonus() {
+  /*  public double getInteractionBonus() {
         return interactionBonus;
-    }
+    }*/
 /*
     public void setInteractionBonus(double interactionBonus) {
         this.interactionBonus = interactionBonus;
     }
 */
-    public double getInteractionPenalty() {
+   /* public double getInteractionPenalty() {
         return interactionPenalty;
-    }
+    }*/
 /*
     public void setInteractionPenalty(double interactionPenalty) {
         this.interactionPenalty = interactionPenalty;
@@ -137,11 +138,11 @@ public enum Actor implements Serializable {
         }
         return true;
     }
-*/
+*//*
     @Override
     public String toString() {
         return "Actor{" + "name=" + name + ", description=" + description + ", startLocation=" + startLocation + ", conversation=" + conversation + ", interactionBonus=" + interactionBonus + ", interactionPenalty=" + interactionPenalty + '}';
     }
-    
+    */
     
 }
