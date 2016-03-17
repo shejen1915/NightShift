@@ -19,16 +19,7 @@ public class StartProgramView extends View {
     private String promptMessage;
     
     public StartProgramView() {
-        
-        this.promptMessage = "\nPlease enter your name: ";
-        this.displayBanner();
-        
-    }
-
-    private void displayBanner() {
-        
-    System.out.println(
-        "\n***********************************************************"
+        super("\n***********************************************************"
        +"\n                                                           "
        +"\n                      NIGHT SHIFT                          "
        +"\n You are Victor a twenty something year old college student"
@@ -42,8 +33,13 @@ public class StartProgramView extends View {
        +"\n last day, so make the most of it! But becareful to not get"
        +"\n to careless. Now go make this night shift fun!            "         
        +"\n***********************************************************"
-        );
+       + "\nPlease enter your name: ");
+       
+        
     }
+
+    
+
 
     
     @Override
