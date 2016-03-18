@@ -80,7 +80,7 @@ public class StartProgramView extends View {
             return false;
         }
 */
-        this.displayNextView(player);
+//        this.displayNextView(player);
         return true;
         
     }
