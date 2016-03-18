@@ -11,7 +11,11 @@ package byui.cit260.nightShift.model;
  */
 public class Point {
 
+    public int x;
+    public int y;
+
     Point(int i, int i0) {
+    //Point(int x, int y) {
         System.out.println("\nYou just called the Point function");
     }
     

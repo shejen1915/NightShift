@@ -5,8 +5,11 @@
  */
 package byui.cit260.nightShift.control;
 
+import byui.cit260.nightShift.model.Actor;
 import byui.cit260.nightShift.model.Map;
+import byui.cit260.nightShift.model.Point;
 import byui.cit260.nightShift.model.RegularScene;
+import nightshift.NightShift;
 
 /**
  *
@@ -28,9 +31,23 @@ public class MapControl {
 }
 
     public static RegularScene[] createScenes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException
+        ("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+/*
+    public static int moveActorToStartingLocation(Actor actor, Point coordinates) {
+        
+        Map map = NightShift.getCurrentGame().getMap();
+        int newFloor = coordinates.x-1;
+        int newRoom = coordinates.y-1;
+        
+        if (newFloor < 0 || newFloor >= map.getFloorNumber() ||
+            newRoom < 0 || newRoom >= map.getRoomNumber()) {
+            return -1;
+        }
+        return 0;
+    }
+*/
     static void moveActorToStartingLocation(Map map) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

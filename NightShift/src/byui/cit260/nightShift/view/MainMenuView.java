@@ -6,6 +6,7 @@
 package byui.cit260.nightShift.view;
 
 import byui.cit260.nightShift.control.GameControl;
+import byui.cit260.nightShift.exceptions.GameControlException;
 import java.util.Scanner;
 import nightshift.NightShift;
 
@@ -129,11 +130,19 @@ public class MainMenuView extends View {
 
     private void startNewGame() {
             // create a new game
+            try {
         GameControl.createNewGame(NightShift.getPlayer());
+            } catch (GameControlException me) {
+                System.out.println(me.getMessage());
+            }
                 
-        //display the game menu
+        //display the game menu? 
+        /*
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
+        */
+        StartProgramView startProgram = new StartProgramView();
+        startProgram.display();
     }
 
     private void startExistingGame() {

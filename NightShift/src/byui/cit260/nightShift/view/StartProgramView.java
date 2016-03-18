@@ -6,6 +6,7 @@
 package byui.cit260.nightShift.view;
 
 import byui.cit260.nightShift.control.GameControl;
+import byui.cit260.nightShift.exceptions.GameControlException;
 import byui.cit260.nightShift.model.Player;
 import java.util.Scanner;
 
@@ -66,12 +67,19 @@ public class StartProgramView extends View {
         }
         
         //call createPlayer() control function
-        Player player = GameControl.createPlayer(value);
         
+        try {
+        Player player = GameControl.createPlayer(value);
+        } catch (GameControlException me) {
+            System.out.println(me.getMessage());
+        }
+        
+        /*
         if (player == null) { // if unsuccessful
             System.out.println("\nError creating the player.");
             return false;
         }
+*/
         this.displayNextView(player);
         return true;
         

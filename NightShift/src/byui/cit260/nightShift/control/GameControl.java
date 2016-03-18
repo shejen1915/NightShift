@@ -5,6 +5,7 @@
  */
 package byui.cit260.nightShift.control;
 
+import byui.cit260.nightShift.exceptions.GameControlException;
 import byui.cit260.nightShift.model.Game;
 import byui.cit260.nightShift.model.InventoryItem;
 import byui.cit260.nightShift.model.InventoryItem.Item;
@@ -21,7 +22,8 @@ import nightshift.NightShift;
  */
 public class GameControl {
     
-    public static void createNewGame (Player player) {
+    public static void createNewGame (Player player)
+                            throws GameControlException {
         //System.out.println("\n*** createNewGame stub function called ***");
         
         Game game = new Game(); //create new game
@@ -47,11 +49,16 @@ public class GameControl {
     }
     
 
-    public static Player createPlayer(String name) {
-        if (name == null) {
+    public static Player createPlayer(String name) 
+                                throws GameControlException {
+        /*if (name == null) {
             return null;
         }
+        */
         
+        if (name == null) {
+            throw new GameControlException("Cannot enter a blank name");
+        }
         Player player = new Player();
         player.setName(name);
         
