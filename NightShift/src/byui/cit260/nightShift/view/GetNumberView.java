@@ -12,17 +12,23 @@ package byui.cit260.nightShift.view;
 public class GetNumberView extends View {
     
     public GetNumberView() {
+        super ("\n Enter your age");
     }
     
-    public Double getNumber() {
-        
-        super("\n Enter a number");
-        }
+      
+    
+    
 
-        
-    
-    
+    @Override
+    public boolean doAction(String value) {
         Double number = null;
+        //Convert to a number
+        
+        //make sure it's not less that 0, display error and return false
+        //make sure it's not greater than 100, display error and return false
+        
+        //display input
+        
         
         while (number == null) {
             String value = this.getInput();
@@ -36,5 +42,7 @@ public class GetNumberView extends View {
         }
         
         return number;
+
+    }
     }
 }
