@@ -41,7 +41,13 @@ public enum Actor implements Serializable {
     private final String conversation;
     private final double interactionBonus;
     private final double interactionPenalty;
-
+    
+    Actor (String description) {
+        this.description = description;
+        Point coordinates = new Point(1,1);
+    }
+    
+/*
     private Actor() {
     }
 
