@@ -22,6 +22,9 @@ import byui.cit260.nightShift.model.RegularScene;
 import byui.cit260.nightShift.model.ToolItem;
 import byui.cit260.nightShift.model.UpDown;
 import byui.cit260.nightShift.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 
 /**
  *
@@ -35,15 +38,28 @@ public class NightShift {
     private static Game currentGame = null;
     private static Player player = null;
     
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    
     public static void main(String[] args) {
         
-        StartProgramView startProgramView = new StartProgramView();
         try {
+            
+            // open character stream files for end user input and output
+            NightShift.inFile =
+                    new BufferedReader(new InputStreamReader(System.in));
+            NightShift.outFile = new PrintWriter(System.out, true);
+        }
+        
+        StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
-        }catch (Throwable te) {
-            System.out.println(te.getMessage());
-            te.printStackTrace();
-            startProgramView.display();
+        return;
+        
+        }catch (Throwable e) {
+            System.out.println("Exception: " e.toString() +
+                               "\nCause: " + e.getCause() +
+                               "\nMessage: " + e.getMessage());
+            e.printStackTrace();;
         }
     }
 
@@ -61,6 +77,22 @@ public class NightShift {
 
     public static void setPlayer(Player player) {
         NightShift.player = player;
+    }
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        NightShift.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        NightShift.inFile = inFile;
     }
     
 }
