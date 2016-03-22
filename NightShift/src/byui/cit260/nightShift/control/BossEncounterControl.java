@@ -12,7 +12,8 @@ import byui.cit260.nightShift.exceptions.BossEncounterControlException;
  * @author Ni shi shei
  */
 public class BossEncounterControl {
-        public static int bossEquation(double goingUp, double goingDown) throws BossEncounterControlException
+        public static int bossEquation(double goingUp, double goingDown) 
+                throws BossEncounterControlException
         {
         
 
