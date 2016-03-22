@@ -5,6 +5,7 @@
  */
 package byui.cit260.nightShift.control;
 
+import byui.cit260.nightShift.exceptions.BossEncounterControlException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -41,7 +42,7 @@ public class BossEncounterControlIT {
      * Test of bossEquation method, of class BossEncounterControl.
      */
     @Test
-    public void testBossEquation() {
+    public void testBossEquation() throws BossEncounterControlException {
         System.out.println("bossEquation");
         double goingUp = 0.0;
         double goingDown = 0.0;
