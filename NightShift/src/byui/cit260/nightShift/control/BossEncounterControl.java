@@ -5,12 +5,14 @@
  */
 package byui.cit260.nightShift.control;
 
+import byui.cit260.nightShift.exceptions.BossEncounterControlException;
+
 /**
  *
  * @author Ni shi shei
  */
 public class BossEncounterControl {
-        public double bossEquation(double goingUp, double goingDown)
+        public static int bossEquation(double goingUp, double goingDown) throws BossEncounterControlException
         {
         
 
@@ -28,7 +30,9 @@ public class BossEncounterControl {
         
         double gettingCought ;
         gettingCought = (Math.PI* slyNess * sneakY);
-
-    return gettingCought; 
+        throw new BossEncounterControlException("Can determine encounter"
+                                               + goingUp + "," + goingDown
+                                               + " because you are being sneaky"
+                                               + " the bounds og the map");
     }
 }
