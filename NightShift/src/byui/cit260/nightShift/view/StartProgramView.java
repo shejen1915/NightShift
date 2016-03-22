@@ -67,9 +67,9 @@ public class StartProgramView extends View {
         }
         
         //call createPlayer() control function
-        
+        Player player = null;
         try {
-        Player player = GameControl.createPlayer(value);
+        player = GameControl.createPlayer(value);
         } catch (GameControlException me) {
             System.out.println(me.getMessage());
         }
