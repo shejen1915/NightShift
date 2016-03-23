@@ -61,6 +61,9 @@ public class NightShift {
                                "\nMessage: " + e.getMessage());
             e.printStackTrace();;
         }
+        finally {
+        NightShift.inFile.close();
+        NightShift.outFile.close();
     }
 
     public static Game getCurrentGame() {
