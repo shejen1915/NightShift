@@ -31,7 +31,7 @@ public class GetNumberView extends View {
         
         
         while (number == null) {
-            String value = this.getInput();
+            value = this.getInput();
             value = value.trim().toUpperCase();
             
             if (value.equals("Q"))
@@ -41,8 +41,8 @@ public class GetNumberView extends View {
             number = Double.parseDouble(value);
         }
         
-        return number;
+        return ;
 
     }
     }
-}
+
