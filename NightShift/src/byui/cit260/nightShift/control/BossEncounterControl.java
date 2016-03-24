@@ -13,8 +13,7 @@ import byui.cit260.nightShift.exceptions.BossEncounterControlException;
  */
 public class BossEncounterControl {
         public static int bossEquation(double goingUp, double goingDown) 
-                throws BossEncounterControlException
-        {
+                throws BossEncounterControlException {
         
 
         if (goingDown <= 7) { // going down is null?
