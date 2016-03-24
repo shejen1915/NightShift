@@ -5,13 +5,15 @@
  */
 package byui.cit260.nightShift.control;
 
+import byui.cit260.nightShift.exceptions.GhostEncounterControlException;
+
 /**
  *
  * @author Ni shi shei
  */
 public class GhostEncounterControl {
-    public double calcGhostEncounterProbability(double collectedItems, double collectableItems, double numberOfCharms, double superstitious, double unsuperstitious) {
-
+    public static void calcGhostEncounterProbability(double collectedItems, double collectableItems, double numberOfCharms, double superstitious, double unsuperstitious) 
+                            throws GhostEncounterControlException {
         //declared variables
         double charmPoints = 1;
         
@@ -19,15 +21,15 @@ public class GhostEncounterControl {
         
         
 	if (stair != 100) {
-            return -1;
+           
         }
         
 	if (collectedItems < 0 || collectedItems > 5) {
-            return -1;
+           
         }
         
 	if(charmPoints < 0 || charmPoints > 10) {
-            return -1;
+      
         }    
         
 
@@ -39,7 +41,10 @@ public class GhostEncounterControl {
                 
         double probability = stair - itemBonus - superstitious - unsuperstitious - charmBonus;
             //ghostEncounterProbability = 100 – collectedItemBonus – (superstitiousCompanion OR unsuperstitiousCompanion) – (charmPoints)
-            return probability;
+            throw new GhostEncounterControlException("I am so scared "
+                                                     + itemBonus + "," + charmBonus + "," + probability
+                                                     + "Because I may have done this wrong"
+                                                     + "so it may not work.");
     }
 
 }
