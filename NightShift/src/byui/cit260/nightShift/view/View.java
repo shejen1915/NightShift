@@ -5,25 +5,26 @@
  */
 package byui.cit260.nightShift.view;
 
-import java.io.BufferedReader;
-import java.io.PrintWriter;
 import java.util.Scanner;
-import nightshift.NightShift;
 
 /**
  *
  * @author Ni shi shei
  */
 public abstract class View implements ViewInterface {
-   
-    private String message;
+    
+    private String displayMessage;
     
     protected final BufferedReader keyboard = NightShift.getInFile();
     protected final PrintWriter console = NightShift.getOutFile();
     
     public View() {
     }
- 
+    
+    public View(String message) {
+        this.displayMessage = message;
+    }
+    
     @Override 
     public void display() {
 
