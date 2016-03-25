@@ -47,20 +47,20 @@ public abstract class View implements ViewInterface {
     @Override
     public String getInput() {
 
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+        // Scanner keyboard = new Scanner(System.in); // get infile for keyboard
         boolean valid = false; // initialize to not valid
         String selection = null; // value to be returned
-        
+        try {
         while (!valid) { // loop while valid input has not been retrieved
             
             // prompt for the player's name
-            System.out.println("\n" + this.displayMessage);
+            // System.out.println("\n" + this.displayMessage);
             
             selection = this.keyboard.readLine(); // get next line typed on keyboard
             selection = selection.trim(); // trim off leading and trailing blanks
             
             if (selection.length() < 1) { // value is blank
-                ErrorView.display(this.getClass().getName())
+                ErrorView.display(this.getClass().getName(),
                                    "You must enter a value.");
                 continue;
             }
