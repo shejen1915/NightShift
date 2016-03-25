@@ -5,7 +5,10 @@
  */
 package byui.cit260.nightShift.view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import nightshift.NightShift;
 
 /**
  *
@@ -17,6 +20,7 @@ public abstract class View implements ViewInterface {
     
     protected final BufferedReader keyboard = NightShift.getInFile();
     protected final PrintWriter console = NightShift.getOutFile();
+    private boolean message;
     
     public View() {
     }
@@ -27,7 +31,7 @@ public abstract class View implements ViewInterface {
     
     @Override 
     public void display() {
-           String value;
+        String value;
         boolean done = false; // set flag to not done
         do {
             // prompt for and get players name
@@ -52,22 +56,22 @@ public abstract class View implements ViewInterface {
             // prompt for the player's name
             System.out.println("\n" + this.displayMessage);
             
-            select = keyboard.readLine(); // get next line typed on keyboard
-            select = selection.trim(); // trim off leading and trailing blanks
+            selection = this.keyboard.readLine(); // get next line typed on keyboard
+            selection = selection.trim(); // trim off leading and trailing blanks
             
             if (selection.length() < 1) { // value is blank
-                System.out.println("\n*** Invalid value: value cannot be blank ***");
+                ErrorView.display(this.getClass().getName())
+                                   "You must enter a value.");
                 continue;
             }
             
             break; // end the loop
         }
     } catch (Exception e) {
-        System.out.println("Error reading input: " + e.getMessage());
+        ErrorView.display(this.getClass().getName(),
+                "Error reading input:" + e.getMessage());
 }   
-        return selection; // return the value entered
+        return null;
         
-            
-        
-    }
+     }
 }
