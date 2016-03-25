@@ -23,8 +23,11 @@ import byui.cit260.nightShift.model.ToolItem;
 import byui.cit260.nightShift.model.UpDown;
 import byui.cit260.nightShift.view.StartProgramView;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -41,6 +44,16 @@ public class NightShift {
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     
+    public static PrintWriter logFile = null;
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        NightShift.logFile = logFile;
+    }
+    
     public static void main(String[] args) {
         
         try {
@@ -49,22 +62,40 @@ public class NightShift {
             NightShift.inFile =
                     new BufferedReader(new InputStreamReader(System.in));
             NightShift.outFile = new PrintWriter(System.out, true);
+            
+            // open log file
+            String filePath = "log.txt";
+            NightShift.logFile = new PrintWriter(filePath);
         }
         
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
         return;
         
-        }catch (Throwable e) {
+    }catch (Throwable e) {
             System.out.println("Exception: " e.toString() +
                                "\nCause: " + e.getCause() +
                                "\nMessage: " + e.getMessage());
             e.printStackTrace();;
         }
-        finally {
-        NightShift.inFile.close();
-        NightShift.outFile.close();
+     finally {
+         try {
+           if (NightShift.inFile != null)
+               NightShift.inFile.close();
+           
+           if (NightShift.outFile != null)
+               NightShift.outFile.close();
+           
+           if (NightShift.logFile != null)
+               NightShift.logFile.close();
+        } catch (IOException ex) {
+            System.out.println("Error closing files");
+            return;
+        }
+
     }
+     
+
 
     public static Game getCurrentGame() {
         return currentGame;
