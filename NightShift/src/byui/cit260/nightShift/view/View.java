@@ -70,8 +70,7 @@ public abstract class View implements ViewInterface {
     } catch (Exception e) {
         ErrorView.display(this.getClass().getName(),
                 "Error reading input:" + e.getMessage());
-}   
-        return null;
+      return null;
         
      }
 }
