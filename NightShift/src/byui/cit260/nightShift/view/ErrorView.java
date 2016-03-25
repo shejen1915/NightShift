@@ -15,13 +15,15 @@ import nightshift.NightShift;
 public class ErrorView {
     
     private static final PrintWriter errorFile = NightShift.getOutFile();
-    
+    private static final PrintWriter logFile = NightShift.getLogFile();
     public static void display(String className, String errorMessage){
         
         errorFile.println(
                     "-------------------------------------------------"
                   + "\n- ERROR -" + errorMessage
                   + "\n------------------------------------------------");
+        //log error
+        logFile.print(className + "-" + errorMessage);
     }
     
     }
