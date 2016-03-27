@@ -66,19 +66,22 @@ public class NightShift {
             // open log file
             String filePath = "log.txt";
             NightShift.logFile = new PrintWriter(filePath);
-        }
+        
         
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
         return;
         
-    }catch (Throwable e) {
+    } catch (Throwable e) {
+        
+    
             System.out.println("Exception: " e.toString() +
                                "\nCause: " + e.getCause() +
                                "\nMessage: " + e.getMessage());
             e.printStackTrace();;
         }
      finally {
+
          try {
            if (NightShift.inFile != null)
                NightShift.inFile.close();
@@ -90,7 +93,7 @@ public class NightShift {
                NightShift.logFile.close();
         } catch (IOException ex) {
             System.out.println("Error closing files");
-            return;
+            
         }
 
     }
