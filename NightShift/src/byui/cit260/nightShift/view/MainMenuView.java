@@ -94,7 +94,7 @@ public class MainMenuView extends View {
     public boolean doAction(String value) {
      
         value = value.toUpperCase(); // convert to all upper case
-        
+        char choice = value.charAt(0);
         switch (value) {
         case "N": // create and start a new game
             this.startNewGame();
@@ -109,7 +109,8 @@ public class MainMenuView extends View {
             this.saveGame();
             break;
         default:
-            System.out.println("\n*** Invalid selection *** Try again");
+            ErrorView.display("MainMenuView",
+                    "*** Invalid selection *** Try again");
             break;
     }
     
