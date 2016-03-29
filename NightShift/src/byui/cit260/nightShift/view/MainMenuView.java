@@ -157,7 +157,17 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println("\n*** Save Game funciton has been called***");
+        //prompt for and get the name of the file to save the game in
+        this.console.println("\n\nEnter the file path for file where the game "
+                            + "is to be saved.");
+        String filePath = this.getInput();
+        
+        try { 
+            // save the game to the speciried file
+            GameControl.saveGame(NightShift.getCurrentGame(), filePath);
+          } catch (Exception ex){
+              ErrorView.display("MainMenuView", ex.getMessage());
+          }
     }
 
     private static class ExistingGameview extends ExistingGameView {
