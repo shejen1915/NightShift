@@ -113,6 +113,10 @@ public class NightShift {
     public static void setInFile(BufferedReader inFile) {
         NightShift.inFile = inFile;
     }
+
+    public static Player getPlayer() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
     /** SHOULD I REALLY DELETE ALL THIS?
