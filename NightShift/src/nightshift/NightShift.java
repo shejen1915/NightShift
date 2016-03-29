@@ -117,6 +117,14 @@ public class NightShift {
     public static Player getPlayer() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public static void setPlayer(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static void setCurrentGame(Game game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
     /** SHOULD I REALLY DELETE ALL THIS?
