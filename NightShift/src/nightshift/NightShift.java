@@ -67,15 +67,13 @@ public class NightShift {
             String filePath = "log.txt";
             NightShift.logFile = new PrintWriter(filePath);
         
-        
+        //create StartProgramView and start the Program
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
         return;
         
-    } catch (Throwable e) {
-        
-    
-            System.out.println("Exception: " e.toString() +
+    }catch (Throwable e) {
+            System.out.println("Exception: " + e.toString() +
                                "\nCause: " + e.getCause() +
                                "\nMessage: " + e.getMessage());
             e.printStackTrace();;
@@ -99,23 +97,8 @@ public class NightShift {
     }
      
 
-
-    public static Game getCurrentGame() {
-        return currentGame;
     }
-
-    public static void setCurrentGame(Game currentGame) {
-        NightShift.currentGame = currentGame;
-    }
-
-    public static Player getPlayer() {
-        return player;
-    }
-
-    public static void setPlayer(Player player) {
-        NightShift.player = player;
-    }
-
+ 
     public static PrintWriter getOutFile() {
         return outFile;
     }
@@ -130,6 +113,10 @@ public class NightShift {
 
     public static void setInFile(BufferedReader inFile) {
         NightShift.inFile = inFile;
+    }
+
+    public static Player getPlayer() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
