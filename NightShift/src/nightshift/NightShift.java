@@ -44,7 +44,7 @@ public class NightShift {
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     
-    public static PrintWriter logFile = null;
+    private static PrintWriter logFile = null;
 
     public static PrintWriter getLogFile() {
         return logFile;
@@ -79,6 +79,7 @@ public class NightShift {
             e.printStackTrace();;
         }
      finally {
+
          try {
            if (NightShift.inFile != null)
                NightShift.inFile.close();
@@ -90,7 +91,7 @@ public class NightShift {
                NightShift.logFile.close();
         } catch (IOException ex) {
             System.out.println("Error closing files");
-            return;
+            
         }
 
     }
