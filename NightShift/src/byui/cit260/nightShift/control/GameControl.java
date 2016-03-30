@@ -104,7 +104,7 @@ public class GameControl {
     }
 
     public static InventoryItem[] getSortedInventoryList() {
-   this.console.println("\n*** getSortedInventoryList stub function called ***");
+   System.out.println("\n*** getSortedInventoryList stub function called ***");
     return null;
     }
     public static void saveGame(Game game, String filepath)
