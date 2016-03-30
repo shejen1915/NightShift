@@ -14,7 +14,9 @@ import byui.cit260.nightShift.model.Pillar;
 import byui.cit260.nightShift.model.Player;
 import byui.cit260.nightShift.model.RegularScene;
 import byui.cit260.nightShift.model.Window;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import nightshift.NightShift;
 
@@ -23,6 +25,8 @@ import nightshift.NightShift;
  * @author Ni shi shei
  */
 public class GameControl {
+
+    private static String filepath;
     
     public static void createNewGame (Player player)
                             throws GameControlException {
@@ -115,11 +119,18 @@ public class GameControl {
         }
     }
 
-    public static void getExistingGame(String filePath) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public static void getExistingGame(String filePath) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}
+    public static void getExistingGame(String filePath) 
+                        throws GameControlException {
+            Game game = null;
+        
+        try( FileInputStream fips = new FileInputStream(filepath)) {
+            ObjectInputStream input = new ObjectInputStream(fips);
+            
+            game = (Game) input.readObject(); //read the game object from 
+        }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+        //close the output file
+        NightShift.setCurrentGame(game);// save in NightShift
+    }}
