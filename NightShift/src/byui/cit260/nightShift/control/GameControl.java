@@ -114,4 +114,12 @@ public class GameControl {
             throw new GameControlException(e.getMessage());
         }
     }
+
+    public static void getExistingGame(String filePath) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static void getExistingGame(String filePath) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
