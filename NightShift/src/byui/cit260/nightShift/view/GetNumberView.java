@@ -41,7 +41,7 @@ public class GetNumberView extends View {
             number = Double.parseDouble(value);
         }
         
-        return ;
+        return false;
 
     }
     }
