@@ -20,7 +20,7 @@ public abstract class View implements ViewInterface {
     
     protected final BufferedReader keyboard = NightShift.getInFile();
     protected final PrintWriter console = NightShift.getOutFile();
-    private boolean message;
+    
     
     public View() {
     }
@@ -35,7 +35,7 @@ public abstract class View implements ViewInterface {
         boolean done = false; // set flag to not done
         do {
             // prompt for and get players name
-            this.console.println(this.message);
+            this.console.println(this.displayMessage);
             value = this.getInput(); // user wants to quit
             
             // do the requested action and display the next view
