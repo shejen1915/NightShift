@@ -14,6 +14,8 @@ import java.util.Objects;
  */
 public class RegularScene implements Serializable{
 
+    
+    
       // class instance variables
        private String description;
        private String lockedStatus;

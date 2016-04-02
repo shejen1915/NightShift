@@ -13,8 +13,9 @@ import java.util.Objects;
  * @author Ni shi shei
  */
 public enum CharmItem implements Serializable{
-    
-    buffaloCharm(1,new Point(2,3)),
+   
+
+    buffaloCharm(1,new Point(0,0)),
     bobcatCharm(1,new Point(1,3));
     
     private final double defenseBoost;
@@ -35,7 +36,29 @@ public enum CharmItem implements Serializable{
         return mapLocation;
     }
 
+/*
+    
+        buffaloCharm(1,new Point(2,3)),
+    bobcatCharm(1,new Point(1,3));
+    
+    private final double defenseBoost;
+    private final Point mapLocation;
 
+    CharmItem(double defenseBoost, Point mapLocation) {
+        this.defenseBoost = defenseBoost;
+        this.mapLocation = mapLocation;
+    }
+
+
+    public double getDefenseBoost() {
+        return defenseBoost;
+    }
+
+
+    public Point getMapLocation() {
+        return mapLocation;
+    }
+    */
 
     
 

@@ -23,7 +23,7 @@ public class Location implements Serializable{
    private int itemsRemaining;
    private Scene scene;
    private ArrayList<Actor> actors;
-   private CharmItem charItem;
+   private CharmItem charmItem;
 
     public Location() {
     }
@@ -76,12 +76,12 @@ public class Location implements Serializable{
         this.actors = actors;
     }
 
-    public CharmItem getCharItem() {
-        return charItem;
+    public CharmItem getCharmItem() {
+        return charmItem;
     }
 
-    public void setCharItem(CharmItem charItem) {
-        this.charItem = charItem;
+    public void setCharmItem(CharmItem charmItem) {
+        this.charmItem = charmItem;
     }
 
  

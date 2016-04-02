@@ -56,7 +56,7 @@ public class Map implements Serializable{
        
         ArrayList<Integer> rooms = new ArrayList<>();
         
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             rooms.add(i);
         }
         
@@ -71,38 +71,79 @@ public class Map implements Serializable{
         int floor = 0;
         Collections.shuffle(rooms);
         int randomRoom = rooms.get(0);
-        this.locations[floor][randomRoom].setCharItem(charms.get(0));
+        this.locations[floor][randomRoom].setCharmItem(charms.get(0));
         
         randomRoom = rooms.get(1);
-        this.locations[floor][randomRoom].setCharItem(charms.get(1));
+        this.locations[floor][randomRoom].setCharmItem(charms.get(1));
         
         randomRoom = rooms.get(2);
-        this.locations[floor][randomRoom].setCharItem(charms.get(2));
+        this.locations[floor][randomRoom].setCharmItem(charms.get(2));
+
+        floor = 1;
+        Collections.shuffle(rooms);
+        randomRoom = rooms.get(0);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(3));
         
-        randomRoom = rooms.get(3);
-        this.locations[floor][randomRoom].setCharItem(charms.get(3));
+        randomRoom = rooms.get(1);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(4));
+        
+        randomRoom = rooms.get(2);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(5));
         
         floor = 2;
         Collections.shuffle(rooms);
         randomRoom = rooms.get(0);
-        this.locations[floor][randomRoom].setCharItem(charms.get(4));
+        this.locations[floor][randomRoom].setCharmItem(charms.get(6));
         
         randomRoom = rooms.get(1);
-        this.locations[floor][randomRoom].setCharItem(charms.get(5));
+        this.locations[floor][randomRoom].setCharmItem(charms.get(7));
         
         randomRoom = rooms.get(2);
-        this.locations[floor][randomRoom].setCharItem(charms.get(6));
-        
-        randomRoom = rooms.get(3);
-        this.locations[floor][randomRoom].setCharItem(charms.get(7));
+        this.locations[floor][randomRoom].setCharmItem(charms.get(8));
        
+        floor = 3;
+        Collections.shuffle(rooms);
+        randomRoom = rooms.get(0);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(9));
         
+        randomRoom = rooms.get(1);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(10));
         
+        randomRoom = rooms.get(2);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(11));
         
+        floor = 4;
+        Collections.shuffle(rooms);
+        randomRoom = rooms.get(0);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(12));
         
+        randomRoom = rooms.get(1);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(13));
         
+        randomRoom = rooms.get(2);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(14));        
         
+        floor = 5;
+        Collections.shuffle(rooms);
+        randomRoom = rooms.get(0);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(15));
         
+        randomRoom = rooms.get(1);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(16));
+        
+        randomRoom = rooms.get(2);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(17));        
+        
+        floor = 6;
+        Collections.shuffle(rooms);
+        randomRoom = rooms.get(0);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(18));
+        
+        randomRoom = rooms.get(1);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(19));
+        
+        randomRoom = rooms.get(2);
+        this.locations[floor][randomRoom].setCharmItem(charms.get(20));        
         
     }
 /*
