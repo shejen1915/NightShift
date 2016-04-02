@@ -73,8 +73,9 @@ public class GameMenuView extends View {
         for (InventoryItem inventoryItem : inventory ) {
             //DISPLAY the description, the required amount and amount in stock
             System.out.println(inventoryItem.getDescription()+ "\t " +
-                               inventoryItem.getRequiredAmount()+ "\t" +
-                               inventoryItem.getQuantityInStock());
+                               inventoryItem.getRequiredAmount()+ "\t"
+            );
+                               // + inventoryItem.getQuantityInStock());
         }
     }
 

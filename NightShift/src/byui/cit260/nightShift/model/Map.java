@@ -6,6 +6,9 @@
 package byui.cit260.nightShift.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 /**
  *
@@ -44,6 +47,63 @@ public class Map implements Serializable{
             locations[floor][room] = location;
             }
         }
+    }
+    
+    
+    
+    public void assignCharmsToLocations() {
+        
+       
+        ArrayList<Integer> rooms = new ArrayList<>();
+        
+        for (int i = 0; i < 5; i++) {
+            rooms.add(i);
+        }
+        
+        ArrayList<CharmItem> charms = new ArrayList<CharmItem>();
+        CharmItem[] charsArray = CharmItem.values();
+        for (CharmItem charmItem : charsArray) {
+            charms.add(charmItem);
+        }
+        
+        Collections.shuffle(charms);
+        
+        int floor = 0;
+        Collections.shuffle(rooms);
+        int randomRoom = rooms.get(0);
+        this.locations[floor][randomRoom].setCharItem(charms.get(0));
+        
+        randomRoom = rooms.get(1);
+        this.locations[floor][randomRoom].setCharItem(charms.get(1));
+        
+        randomRoom = rooms.get(2);
+        this.locations[floor][randomRoom].setCharItem(charms.get(2));
+        
+        randomRoom = rooms.get(3);
+        this.locations[floor][randomRoom].setCharItem(charms.get(3));
+        
+        floor = 2;
+        Collections.shuffle(rooms);
+        randomRoom = rooms.get(0);
+        this.locations[floor][randomRoom].setCharItem(charms.get(4));
+        
+        randomRoom = rooms.get(1);
+        this.locations[floor][randomRoom].setCharItem(charms.get(5));
+        
+        randomRoom = rooms.get(2);
+        this.locations[floor][randomRoom].setCharItem(charms.get(6));
+        
+        randomRoom = rooms.get(3);
+        this.locations[floor][randomRoom].setCharItem(charms.get(7));
+       
+        
+        
+        
+        
+        
+        
+        
+        
     }
 /*
     public Map(int i, int i0) {

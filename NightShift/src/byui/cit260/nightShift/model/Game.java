@@ -20,6 +20,8 @@ public class Game implements Serializable{
     private Map map;
     private InventoryItem[] inventory;
     private Scenes[] scene;
+    private Pillar pillar;
+    private Window window;
 
     public Game() {
     }
@@ -71,33 +73,62 @@ public class Game implements Serializable{
         return "Game{" + "score=" + score + ", startTime=" + startTime + '}';
     }
 
-    public void setScore(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Player getPlayer() {
+        return player;
     }
 
     public void setPlayer(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.player = player;
     }
 
-    public void setInventory(InventoryItem[] inventoryList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String[] getActor() {
+        return actor;
     }
 
-    public void setPillar(Pillar pillar) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setWindow(Window window) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setMap(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setActor(String[] actor) {
+        this.actor = actor;
     }
 
     public Map getMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return map;
     }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public InventoryItem[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(InventoryItem[] inventory) {
+        this.inventory = inventory;
+    }
+
+    public Scenes[] getScene() {
+        return scene;
+    }
+
+    public void setScene(Scenes[] scene) {
+        this.scene = scene;
+    }
+
+    public Pillar getPillar() {
+        return pillar;
+    }
+
+    public void setPillar(Pillar pillar) {
+        this.pillar = pillar;
+    }
+
+    public Window getWindow() {
+        return window;
+    }
+
+    public void setWindow(Window window) {
+        this.window = window;
+    }
+
     
     
     

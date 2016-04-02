@@ -17,7 +17,7 @@ import java.util.Scanner;
     
 public class StartProgramView extends View {
     
-    private String promptMessage;
+    //private String promptMessage;
     
     public StartProgramView() {
         super("\n***********************************************************"
@@ -59,16 +59,24 @@ public class StartProgramView extends View {
         // display customized welcome message
         // display mainMenuView        
         // return true
-        
+        /*
         if (value.length() < 2) {
-            System.out.println("\nInvalid players name: " + 
+            this.console.println("\nInvalid players name: " + 
                     "The name must be greater than one character in lenth");
             return false;
         }
-        
+        */
         //call createPlayer() control function
         Player player = null;
-
+        /*
+        Player player = GameControl.createPlayer(value);
+        
+        if (player == null) {
+            ErrorView.display("StartProgramView", "\nError creating the player.");
+            return false;
+        }
+*/
+        
         try {
         player = GameControl.createPlayer(value);
         } catch (GameControlException me) {

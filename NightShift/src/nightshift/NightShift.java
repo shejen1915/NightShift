@@ -115,21 +115,23 @@ public class NightShift {
         NightShift.inFile = inFile;
     }
 
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        NightShift.currentGame = currentGame;
+    }
+
     public static Player getPlayer() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return player;
     }
 
     public static void setPlayer(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        NightShift.player = player;
     }
 
-    public static void setCurrentGame(Game game) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    public static Game getCurrentGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }
     /** SHOULD I REALLY DELETE ALL THIS?

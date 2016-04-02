@@ -17,90 +17,46 @@ import javafx.scene.Scene;
 public class Location implements Serializable{
     
     // instance variables
-   private String floor;
-   private String room;
-   private String visited;
-   private String itemsRemaining;
+   private int floor;
+   private int room;
+   private boolean visited;
+   private int itemsRemaining;
    private Scene scene;
    private ArrayList<Actor> actors;
+   private CharmItem charItem;
 
     public Location() {
     }
 
-    /**
-     *
-     * @return
-     */
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 73 * hash + Objects.hashCode(this.floor);
-        hash = 73 * hash + Objects.hashCode(this.room);
-        hash = 73 * hash + Objects.hashCode(this.visited);
-        hash = 73 * hash + Objects.hashCode(this.itemsRemaining);
-        return hash;
-    }
-
-    @Override
-    public String toString() {
-        return "Location{" + "floor=" + floor + ", room=" + room + ", visited=" + visited + ", itemsRemaining=" + itemsRemaining + '}';
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Location other = (Location) obj;
-        if (!Objects.equals(this.floor, other.floor)) {
-            return false;
-        }
-        if (!Objects.equals(this.room, other.room)) {
-            return false;
-        }
-        if (!Objects.equals(this.visited, other.visited)) {
-            return false;
-        }
-        return Objects.equals(this.itemsRemaining, other.itemsRemaining);
-    }
-
-   
-   
-    public String getFloor() {
+    public int getFloor() {
         return floor;
     }
 
-    public void setFloor(String floor) {
+    public void setFloor(int floor) {
         this.floor = floor;
     }
 
-    public String getRoom() {
+    public int getRoom() {
         return room;
     }
 
-    public void setRoom(String room) {
+    public void setRoom(int room) {
         this.room = room;
     }
 
-    public String getVisited() {
+    public boolean isVisited() {
         return visited;
     }
 
-    public void setVisited(String visited) {
+    public void setVisited(boolean visited) {
         this.visited = visited;
     }
 
-    public String getItemsRemaining() {
+    public int getItemsRemaining() {
         return itemsRemaining;
     }
 
-    public void setItemsRemaining(String itemsRemaining) {
+    public void setItemsRemaining(int itemsRemaining) {
         this.itemsRemaining = itemsRemaining;
     }
 
@@ -119,30 +75,18 @@ public class Location implements Serializable{
     public void setActors(ArrayList<Actor> actors) {
         this.actors = actors;
     }
-    
-    
+
+    public CharmItem getCharItem() {
+        return charItem;
+    }
+
+    public void setCharItem(CharmItem charItem) {
+        this.charItem = charItem;
+    }
+
+ 
    
-    private static void assigScenesToLocations(Map map, Scene[] scenes) {
-        Location[][] location = map.getLocations();
-        
-        //start point
-        location[0][0].setScene(scenes[SceneType.start.ordinal()]);
-        location[0][0].setScene(scenes[SceneType.roof.ordinal()]);
-        location[0][0].setScene(scenes[SceneType.basement.ordinal()]);
-        location[0][0].setScene(scenes[SceneType.decraze.ordinal()]);
-    }
 
-    void setRoom(int room) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void setFloor(int floor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void setVisited(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
    
     
 }

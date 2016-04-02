@@ -8,7 +8,7 @@ package byui.cit260.nightShift.control;
 import byui.cit260.nightShift.exceptions.GameControlException;
 import byui.cit260.nightShift.model.Game;
 import byui.cit260.nightShift.model.InventoryItem;
-import byui.cit260.nightShift.model.InventoryItem.Item;
+import byui.cit260.nightShift.model.InventoryItem.ItemType;
 import byui.cit260.nightShift.model.Map;
 import byui.cit260.nightShift.model.Pillar;
 import byui.cit260.nightShift.model.Player;
@@ -60,14 +60,16 @@ public class GameControl {
         /*if (name == null) {
             return null;
         }
-        */
+        
         
         if (name == null) {
             throw new GameControlException("Cannot enter a blank name");
         }
+        */
         Player player = new Player();
         player.setName(name);
         
+
         NightShift.setPlayer(player); // save the player
         
         return player;
@@ -80,21 +82,19 @@ public class GameControl {
         
         InventoryItem charm = new InventoryItem();
         charm.setDescription("Charm");
-        charm.setQuantityInStock(0);
         charm.setRequiredAmount(0);
-        inventory[Item.charm.ordinal()] = charm;
+        inventory[ItemType.charm.ordinal()] = charm;
         
         InventoryItem weapon = new InventoryItem();
         weapon.setDescription("Weapon");
         weapon.setQuanityInStock(0);
         weapon.setRequiredAmount(0);
-        inventory[Item.weapon.ordinal()] = weapon;
+        inventory[ItemType.weapon.ordinal()] = weapon;
         
         InventoryItem special = new InventoryItem();
         special.setDescription("Special Item");
-        special.setQuantityInStock(0);
         special.setRequiredAmount(0);
-        inventory[Item.special.ordinal()] = special;
+        inventory[ItemType.special.ordinal()] = special;
         
         return inventory;
     }

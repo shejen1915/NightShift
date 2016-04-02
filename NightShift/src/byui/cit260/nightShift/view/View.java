@@ -37,6 +37,9 @@ public abstract class View implements ViewInterface {
             // prompt for and get players name
             this.console.println(this.displayMessage);
             value = this.getInput(); // user wants to quit
+            if (value.toUpperCase().equals("Q")) {
+                return;
+            }
             
             // do the requested action and display the next view
             done = this.doAction(value);
@@ -71,7 +74,7 @@ public abstract class View implements ViewInterface {
         ErrorView.display(this.getClass().getName(),
                 "Error reading input:" + e.getMessage());
     }
-        return null;
+        return selection;
         
      } }
         
