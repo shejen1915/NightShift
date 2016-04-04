@@ -10,5 +10,9 @@ package byui.cit260.nightShift.model;
  * @author Silver
  */
 public class Description {
+
+    void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
