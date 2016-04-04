@@ -14,7 +14,13 @@ import java.util.Objects;
  */
 public class InventoryItem implements Serializable{
 
-    
+
+    public boolean getDescription() {
+       Description description = new Description();
+        description.display();
+     return false;  }
+
+
     public enum ItemType{
         charm,
         weapon,
@@ -72,7 +78,7 @@ public class InventoryItem implements Serializable{
     public void setQuantityUncollected(double quantityUncollected) {
         this.quantityUncollected = quantityUncollected;
     }
-
+/*
     public String getDescription() {
         return description;
     }
@@ -84,7 +90,7 @@ public class InventoryItem implements Serializable{
     public double getRequiredAmount() {
         return requiredAmount;
     }
-
+*/
     public void setRequiredAmount(double requiredAmount) {
         this.requiredAmount = requiredAmount;
     }
