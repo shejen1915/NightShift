@@ -14,9 +14,10 @@ import java.util.Objects;
  */
 public class InventoryItem implements Serializable{
 
-    public String getDescription() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public boolean getDescription() {
+       Description description = new Description();
+        description.display();
+     return false;  }
 
     public String getRequiredAmount() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
