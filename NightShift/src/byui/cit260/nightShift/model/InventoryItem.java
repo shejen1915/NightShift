@@ -15,7 +15,6 @@ import java.util.Objects;
 public class InventoryItem implements Serializable{
 
 
-
     public boolean getDescription() {
        Description description = new Description();
         description.display();
