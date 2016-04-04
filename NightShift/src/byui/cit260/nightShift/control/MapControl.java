@@ -31,8 +31,7 @@ public class MapControl {
 }
 
     public static RegularScene[] createScenes() {
-        throw new UnsupportedOperationException
-        ("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 /*
     public static int moveActorToStartingLocation(Actor actor, Point coordinates) {
