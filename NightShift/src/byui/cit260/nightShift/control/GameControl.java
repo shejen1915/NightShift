@@ -28,6 +28,8 @@ public class GameControl {
 
     private static String filepath;
     
+
+    
     public static void createNewGame (Player player)
                             throws GameControlException {
         //System.out.println("\n*** createNewGame stub function called ***");
@@ -40,6 +42,11 @@ public class GameControl {
         //create the inventory list and save in the game
         InventoryItem[] inventoryList = GameControl.createInventoryList();
         game.setInventory(inventoryList);
+        
+        //create or call enum of Locked Items (items that you can interact with but 
+        //cannot be taken and put in your inventory: e.g. doors, pillar, window, 
+        
+        
         
         Pillar pillar = new Pillar(); // create new pillar
         game.setPillar(pillar); // save pillar in game
