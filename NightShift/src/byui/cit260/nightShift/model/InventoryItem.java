@@ -80,13 +80,7 @@ public class InventoryItem implements Serializable{
         this.quantityUncollected = quantityUncollected;
     }
 
-    public String getDescription() {
-        return description;
-    }
 
-    public void setDescription(String) {
-        this.description = description;
-    }
 
     public double getRequiredAmount() {
         return requiredAmount;
