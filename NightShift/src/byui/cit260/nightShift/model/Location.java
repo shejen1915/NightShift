@@ -19,12 +19,11 @@ public class Location implements Serializable{
     // instance variables
    private int floor;
    private int room;
-   private int dimension;
    private boolean visited;
    private int itemsRemaining;
    private Scene scene;
-   private ArrayList<Actor> actors;
-   private CharmItem charmItem;
+   private ArrayList<Actor> actors = new ArrayList();
+   private ArrayList<Item> items = new ArrayList();
 
     public Location() {
     }
@@ -45,13 +44,6 @@ public class Location implements Serializable{
         this.room = room;
     }
 
-    public int getDimension() {
-        return dimension;
-    }
-
-    public void setDimension(int dimension) {
-        this.dimension = dimension;
-    }
 
     public boolean isVisited() {
         return visited;
@@ -85,16 +77,13 @@ public class Location implements Serializable{
         this.actors = actors;
     }
 
-    public CharmItem getCharmItem() {
-        return charmItem;
+    public ArrayList<Item> getItems() {
+        return items;
     }
 
-    public void setCharmItem(CharmItem charmItem) {
-        this.charmItem = charmItem;
+    public void setItems(ArrayList<Item> items) {
+        this.items = items;
     }
-
- 
-   
 
    
     

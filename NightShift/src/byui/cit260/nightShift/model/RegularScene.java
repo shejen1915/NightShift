@@ -20,9 +20,8 @@ public class RegularScene implements Serializable{
        private String description;
        private String lockedStatus;
        private String doorUnlockItem;
-       private String actorStatus;
-       private String alternateScene;
        private String sceneItems;
+       private RegularScene alternateScene;
 
     public RegularScene() {
     }
@@ -52,23 +51,13 @@ public class RegularScene implements Serializable{
         this.doorUnlockItem = doorUnlockItem;
     }
 
-    public String getActorStatus() {
-        return actorStatus;
-    }
-
-    public void setActorStatus(String actorStatus) {
-        this.actorStatus = actorStatus;
-    }
-
-    public String getAlternateScene() {
+    public RegularScene getAlternateScene() {
         return alternateScene;
     }
 
-    public void setAlternateScene(String alternateScene) {
+    public void setAlternateScene(RegularScene alternateScene) {
         this.alternateScene = alternateScene;
     }
-
-
 
     public String getSceneItems() {
         return sceneItems;
@@ -84,8 +73,7 @@ public class RegularScene implements Serializable{
         hash = 71 * hash + Objects.hashCode(this.description);
         hash = 71 * hash + Objects.hashCode(this.lockedStatus);
         hash = 71 * hash + Objects.hashCode(this.doorUnlockItem);
-        hash = 71 * hash + Objects.hashCode(this.actorStatus);
-        hash = 71 * hash + Objects.hashCode(this.alternateScene);
+
         hash = 71 * hash + Objects.hashCode(this.sceneItems);
         return hash;
     }
@@ -111,12 +99,7 @@ public class RegularScene implements Serializable{
         if (!Objects.equals(this.doorUnlockItem, other.doorUnlockItem)) {
             return false;
         }
-        if (!Objects.equals(this.actorStatus, other.actorStatus)) {
-            return false;
-        }
-        if (!Objects.equals(this.alternateScene, other.alternateScene)) {
-            return false;
-        }
+
         if (!Objects.equals(this.sceneItems, other.sceneItems)) {
             return false;
         }
@@ -125,12 +108,10 @@ public class RegularScene implements Serializable{
 
     @Override
     public String toString() {
-        return "RegularScene{" + "description=" + description + ", lockedStatus=" + lockedStatus + ", doorUnlockItem=" + doorUnlockItem + ", actorStatus=" + actorStatus + ", alternateScene=" + alternateScene + ", sceneItems=" + sceneItems + '}';
+        return "RegularScene{" + "description=" + description + ", lockedStatus=" + lockedStatus + ", doorUnlockItem=" + doorUnlockItem + ", sceneItems=" + sceneItems + '}';
     }
 
-    public void setDescription() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
        
        
        

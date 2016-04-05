@@ -6,7 +6,7 @@
 package byui.cit260.nightShift.view;
 
 import byui.cit260.nightShift.control.GameControl;
-import byui.cit260.nightShift.model.InventoryItem;
+import byui.cit260.nightShift.model.Item;
 
 /**
  *
@@ -63,14 +63,14 @@ public class GameMenuView extends View {
 
     private void InventoryView() {
         // get the sorted list of inventory items for the current game
-        InventoryItem[] inventory = GameControl.getSortedInventoryList();
+        Item[] inventory = GameControl.getSortedInventoryList();
        
         System.out.println("\nList of Inventory");
         System.out.println("Description" + "\t" +
                             "Required" + "\t" +
                             "In Stock");
         // for each inventory item
-        for (InventoryItem inventoryItem : inventory ) {
+        for (Item inventoryItem : inventory ) {
             //DISPLAY the description, the required amount and amount in stock
             System.out.println(inventoryItem.getDescription()+ "\t " +
                                inventoryItem.getRequiredAmount()+ "\t"

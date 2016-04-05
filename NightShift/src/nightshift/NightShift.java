@@ -14,7 +14,7 @@ import byui.cit260.nightShift.model.Game;
 import byui.cit260.nightShift.model.GhostBusterScene;
 import byui.cit260.nightShift.model.GhostEncounter;
 import byui.cit260.nightShift.model.GoOutWindow;
-import byui.cit260.nightShift.model.InventoryItem;
+import byui.cit260.nightShift.model.Item;
 import byui.cit260.nightShift.model.Location;
 import byui.cit260.nightShift.model.Map;
 import byui.cit260.nightShift.model.Player;

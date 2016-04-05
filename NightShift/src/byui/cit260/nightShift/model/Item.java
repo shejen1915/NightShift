@@ -12,14 +12,11 @@ import java.util.Objects;
  *
  * @author Ni shi shei
  */
-public class InventoryItem implements Serializable{
+public class Item implements Serializable{
 
 
     
-    public boolean getDescription() {
-       Description description = new Description();
-        description.display();
-     return false;  }
+
 
 
     public enum ItemType{
@@ -30,13 +27,17 @@ public class InventoryItem implements Serializable{
     
     private String itemName;
     private String inventoryType;
-    private String equipStatus;
+    private boolean equipStatus;
     private String description;
+    private String specialAbility;
     private double requiredAmount;
     private double quanityInStock;
     private double quantityUncollected;
+    private double defenseBoost;
+    private double attackBoost;
+    
 
-    public InventoryItem() {
+    public Item() {
     }
 
     
@@ -56,11 +57,11 @@ public class InventoryItem implements Serializable{
         this.inventoryType = inventoryType;
     }
 
-    public String getEquipStatus() {
+    public boolean getEquipStatus() {
         return equipStatus;
     }
 
-    public void setEquipStatus(String equipStatus) {
+    public void setEquipStatus(boolean equipStatus) {
         this.equipStatus = equipStatus;
     }
 
@@ -80,14 +81,44 @@ public class InventoryItem implements Serializable{
         this.quantityUncollected = quantityUncollected;
     }
 
-
-
     public double getRequiredAmount() {
         return requiredAmount;
     }
 
     public void setRequiredAmount(double requiredAmount) {
         this.requiredAmount = requiredAmount;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getSpecialAbility() {
+        return specialAbility;
+    }
+
+    public void setSpecialAbility(String specialAbility) {
+        this.specialAbility = specialAbility;
+    }
+
+    public double getDefenseBoost() {
+        return defenseBoost;
+    }
+
+    public void setDefenseBoost(double defenseBoost) {
+        this.defenseBoost = defenseBoost;
+    }
+
+    public double getAttackBoost() {
+        return attackBoost;
+    }
+
+    public void setAttackBoost(double attackBoost) {
+        this.attackBoost = attackBoost;
     }
 
     
@@ -113,7 +144,7 @@ public class InventoryItem implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final InventoryItem other = (InventoryItem) obj;
+        final Item other = (Item) obj;
         if (Double.doubleToLongBits(this.quanityInStock) != Double.doubleToLongBits(other.quanityInStock)) {
             return false;
         }

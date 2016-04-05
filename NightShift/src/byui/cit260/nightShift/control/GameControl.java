@@ -7,13 +7,12 @@ package byui.cit260.nightShift.control;
 
 import byui.cit260.nightShift.exceptions.GameControlException;
 import byui.cit260.nightShift.model.Game;
-import byui.cit260.nightShift.model.InventoryItem;
-import byui.cit260.nightShift.model.InventoryItem.ItemType;
+import byui.cit260.nightShift.model.Item;
+import byui.cit260.nightShift.model.Item.ItemType;
 import byui.cit260.nightShift.model.Map;
 import byui.cit260.nightShift.model.Pillar;
 import byui.cit260.nightShift.model.Player;
 import byui.cit260.nightShift.model.RegularScene;
-import byui.cit260.nightShift.model.AlternateScene;
 import byui.cit260.nightShift.model.Window;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -41,8 +40,8 @@ public class GameControl {
         game.setPlayer(player); // save player in game
         
         //create the inventory list and save in the game
-        InventoryItem[] inventoryList = GameControl.inventoryCatagories();
-        game.setInventory(inventoryList);
+        Item[] inventoryList = GameControl.inventoryCatagories();
+        game.setInventroyItems(inventoryList);
         
          
         /*
@@ -57,7 +56,7 @@ public class GameControl {
         game.setMap(map); // save map in game
         
         // move actors to starting position in the map
-        Map.moveActorToStartingLocation(map);
+        MapControl.moveActorToStartingLocation(map);
     }
     
 
@@ -81,29 +80,37 @@ public class GameControl {
         return player;
     }
 
-    private static InventoryItem[] inventoryCatagories() {
+    private static Item[] inventoryCatagories() {
         // created array(list) of inventory items
-        InventoryItem[] inventory =
-            new InventoryItem[3];
+        Item[] inventory =
+            new Item[3];
         
         
-        /*
-        InventoryItem charm = new InventoryItem();
-        charm.setDescription("Charm");
+        
+        Item charm = new Item();
+        charm.setEquipStatus(false);
+        charm.setItemName("Charm1");
+        charm.setDescription("Charm 1");
+        charm.setAttackBoost(0);
+        charm.setDefenseBoost(1);
+        charm.setSpecialAbility(null);
+        charm.setInventoryType("Charm");
+        charm.setQuanityInStock(0);
+        charm.setQuantityUncollected(0);
         charm.setRequiredAmount(0);
         inventory[ItemType.charm.ordinal()] = charm;
         
-        InventoryItem weapon = new InventoryItem();
+        Item weapon = new Item();
         weapon.setDescription("Weapon");
         weapon.setQuanityInStock(0);
         weapon.setRequiredAmount(0);
         inventory[ItemType.weapon.ordinal()] = weapon;
         
-        InventoryItem special = new InventoryItem();
+        Item special = new Item();
         special.setDescription("Special Item");
         special.setRequiredAmount(0);
         inventory[ItemType.special.ordinal()] = special;
-        */
+        
         
         //can I create an array of arraylists? is there a  better way?
     /*    Arraylist<Charm> charms = new Arraylist<>();
@@ -118,7 +125,7 @@ public class GameControl {
         
     }
 */
-    public static InventoryItem[] getSortedInventoryList() {
+    public static Item[] getSortedInventoryList() {
    System.out.println("\n*** getSortedInventoryList stub function called ***");
     return null;
     }

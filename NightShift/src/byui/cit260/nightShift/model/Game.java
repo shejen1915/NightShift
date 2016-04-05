@@ -6,6 +6,7 @@
 package byui.cit260.nightShift.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,8 +19,9 @@ public class Game implements Serializable{
     private Player player;
     private String[] actor;
     private Map map;
-    private InventoryItem[] inventory;
-    private Scenes[] scene;
+    private Item[] inventroyItems;
+    private ArrayList<Item> collectedItems;
+    private RegularScene[] scene;
     private Pillar pillar;
     private Window window;
 
@@ -97,19 +99,27 @@ public class Game implements Serializable{
         this.map = map;
     }
 
-    public InventoryItem[] getInventory() {
-        return inventory;
+    public Item[] getInventroyItems() {
+        return inventroyItems;
     }
 
-    public void setInventory(InventoryItem[] inventory) {
-        this.inventory = inventory;
+    public void setInventroyItems(Item[] inventroyItems) {
+        this.inventroyItems = inventroyItems;
     }
 
-    public Scenes[] getScene() {
+    public ArrayList<Item> getCollectedItems() {
+        return collectedItems;
+    }
+
+    public void setCollectedItems(ArrayList<Item> collectedItems) {
+        this.collectedItems = collectedItems;
+    }
+
+    public RegularScene[] getScene() {
         return scene;
     }
 
-    public void setScene(Scenes[] scene) {
+    public void setScene(RegularScene[] scene) {
         this.scene = scene;
     }
 

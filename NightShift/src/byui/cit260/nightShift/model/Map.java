@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import nightshift.NightShift;
 
 /**
  *
@@ -18,42 +19,38 @@ public class Map implements Serializable{
     
     private int floorNumber;
     private int roomNumber;
-    private int dimensionNumber;
-    private Location[][][] locations;
+    private Location[][] locations;
 
     public Map() {
     }
     
-    public Map(int floorNumber, int roomNumber, int dimensionNumber) {
+    
+    public Map(int floorNumber, int roomNumber) {
         if (floorNumber < 1 || roomNumber < 1) {
             System.out.println("\nFloor number and room number must be greater"
                     + "than zero");
             return;
-            //How do I incorporate the dimension into the user interaction since
-            //it was supposed to be drinking the right potion that switches your 
-            //dimension
+
         }
         
         this.floorNumber = floorNumber;
         this.roomNumber = roomNumber;
-        this.dimensionNumber = dimensionNumber;
+ 
         
         // create a 2-D array for Location objects
-        this.locations = new Location[floorNumber][roomNumber][dimensionNumber];
+        this.locations = new Location[floorNumber][roomNumber];
         
         for (int floor = 0; floor < floorNumber; floor++) {
             for(int room = 0; room < roomNumber; room++) {
-                for(int dimension = 0; dimension < dimensionNumber; dimension++) {
             // create and initialize new Location object instance
             Location location = new Location();
             location.setRoom(room);
             location.setFloor(floor);
-            location.setDimension(dimension);
             location.setVisited(false);
             
             // assign the Location object to the current position in array
-            locations[floor][room][dimension] = location;
-                }
+            locations[floor][room] = location;
+                
             }
         }
     }
@@ -78,100 +75,85 @@ public class Map implements Serializable{
         Collections.shuffle(charms);
         
         int floor = 0;
-        int dimension = 0;
         Collections.shuffle(rooms);
         int randomRoom = rooms.get(0);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(0));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[0]);
         
         randomRoom = rooms.get(1);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(1));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[1]);
         
         randomRoom = rooms.get(2);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(2));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[2]);
 
         floor = 1;
-        dimension = 0;
         Collections.shuffle(rooms);
         randomRoom = rooms.get(0);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(3));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[3]);
         
         randomRoom = rooms.get(1);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(4));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[4]);
         
         randomRoom = rooms.get(2);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(5));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[5]);
         
         floor = 2;
-        dimension = 0;
         Collections.shuffle(rooms);
         randomRoom = rooms.get(0);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(6));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[6]);
         
         randomRoom = rooms.get(1);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(7));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[7]);
         
         randomRoom = rooms.get(2);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(8));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[8]);
        
         floor = 3;
-        dimension = 0;
         Collections.shuffle(rooms);
         randomRoom = rooms.get(0);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(9));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[9]);
         
         randomRoom = rooms.get(1);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(10));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[10]);
         
         randomRoom = rooms.get(2);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(11));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[11]);
         
         floor = 4;
-        dimension = 0;
         Collections.shuffle(rooms);
         randomRoom = rooms.get(0);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(12));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[12]);
         
         randomRoom = rooms.get(1);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(13));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[13]);
         
         randomRoom = rooms.get(2);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(14));        
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[14]);
         
         floor = 5;
-        dimension = 0;
         Collections.shuffle(rooms);
         randomRoom = rooms.get(0);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(15));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[15]);
         
         randomRoom = rooms.get(1);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(16));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[16]);
         
         randomRoom = rooms.get(2);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(17));        
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[17]);
         
         floor = 6;
-        dimension = 0;
         Collections.shuffle(rooms);
         randomRoom = rooms.get(0);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(18));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[18]);
         
         randomRoom = rooms.get(1);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(19));
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[19]);
         
         randomRoom = rooms.get(2);
-        this.locations[floor][randomRoom][dimension].setCharmItem(charms.get(20));        
+        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[20]);
         
     }
     
-        public static void assignScenesToLocation(Map map, RegularScene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            
-    }
-        
-        public static void moveActorToStartingLocation(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
-    }
     
 /*
     public Map(int i, int i0) {
@@ -194,21 +176,15 @@ public class Map implements Serializable{
         this.roomNumber = roomNumber;
     }
 
-    public Location[][][] getLocations() {
+    public Location[][] getLocations() {
         return locations;
     }
 
-    public void setLocations(Location[][][] locations) {
+    public void setLocations(Location[][] locations) {
         this.locations = locations;
     }
 
-    public int getDimensionNumber() {
-        return dimensionNumber;
-    }
 
-    public void setDimensionNumber(int dimensionNumber) {
-        this.dimensionNumber = dimensionNumber;
-    }
 
 
    
