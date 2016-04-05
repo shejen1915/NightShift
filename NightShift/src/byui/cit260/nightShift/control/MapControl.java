@@ -23,8 +23,8 @@ public class MapControl {
         Map map = new Map(20, 20, 20);
         
         // create a list of the differet scenes in the game
-        Scene[] scenes = createScenes();
-        //RegularScene[] scenes = createRegularScenes();
+        //Scene[] scenes = createScenes();
+        RegularScene[] scenes = createRegularScenes();
         
         
         
