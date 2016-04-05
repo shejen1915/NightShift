@@ -43,10 +43,7 @@ public class GameControl {
         InventoryItem[] inventoryList = GameControl.createInventoryList();
         game.setInventory(inventoryList);
         
-        //create or call enum of Locked Items (items that you can interact with but 
-        //cannot be taken and put in your inventory: e.g. doors, pillar, window, 
-        
-        
+         
         
         Pillar pillar = new Pillar(); // create new pillar
         game.setPillar(pillar); // save pillar in game
