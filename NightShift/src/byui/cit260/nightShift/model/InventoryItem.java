@@ -15,6 +15,7 @@ import java.util.Objects;
 public class InventoryItem implements Serializable{
 
 
+    
     public boolean getDescription() {
        Description description = new Description();
         description.display();
@@ -78,19 +79,19 @@ public class InventoryItem implements Serializable{
     public void setQuantityUncollected(double quantityUncollected) {
         this.quantityUncollected = quantityUncollected;
     }
-/*
+
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String) {
         this.description = description;
     }
 
     public double getRequiredAmount() {
         return requiredAmount;
     }
-*/
+
     public void setRequiredAmount(double requiredAmount) {
         this.requiredAmount = requiredAmount;
     }

@@ -19,6 +19,7 @@ public class Location implements Serializable{
     // instance variables
    private int floor;
    private int room;
+   private int dimension;
    private boolean visited;
    private int itemsRemaining;
    private Scene scene;
@@ -42,6 +43,14 @@ public class Location implements Serializable{
 
     public void setRoom(int room) {
         this.room = room;
+    }
+
+    public int getDimension() {
+        return dimension;
+    }
+
+    public void setDimension(int dimension) {
+        this.dimension = dimension;
     }
 
     public boolean isVisited() {

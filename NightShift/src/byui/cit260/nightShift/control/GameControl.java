@@ -13,6 +13,7 @@ import byui.cit260.nightShift.model.Map;
 import byui.cit260.nightShift.model.Pillar;
 import byui.cit260.nightShift.model.Player;
 import byui.cit260.nightShift.model.RegularScene;
+import byui.cit260.nightShift.model.AlternateScene;
 import byui.cit260.nightShift.model.Window;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -40,22 +41,23 @@ public class GameControl {
         game.setPlayer(player); // save player in game
         
         //create the inventory list and save in the game
-        InventoryItem[] inventoryList = GameControl.createInventoryList();
+        InventoryItem[] inventoryList = GameControl.inventoryCatagories();
         game.setInventory(inventoryList);
         
          
-        
+        /*
         Pillar pillar = new Pillar(); // create new pillar
         game.setPillar(pillar); // save pillar in game
         
         Window window = new Window(); // create new window
         game.setWindow(window); // save window in game
+        */
         
         Map map = MapControl.createMap(); // create and initialize new Map
         game.setMap(map); // save map in game
         
         // move actors to starting position in the map
-        MapControl.moveActorToStartingLocation(map);
+        Map.moveActorToStartingLocation(map);
     }
     
 
@@ -79,11 +81,13 @@ public class GameControl {
         return player;
     }
 
-    private static InventoryItem[] createInventoryList() {
+    private static InventoryItem[] inventoryCatagories() {
         // created array(list) of inventory items
         InventoryItem[] inventory =
             new InventoryItem[3];
         
+        
+        /*
         InventoryItem charm = new InventoryItem();
         charm.setDescription("Charm");
         charm.setRequiredAmount(0);
@@ -99,14 +103,21 @@ public class GameControl {
         special.setDescription("Special Item");
         special.setRequiredAmount(0);
         inventory[ItemType.special.ordinal()] = special;
+        */
+        
+        //can I create an array of arraylists? is there a  better way?
+    /*    Arraylist<Charm> charms = new Arraylist<>();
+        Arraylist<Weapon> weapons = new Arraylist<>();
+        Arraylist<Special> specials = new Arraylist<>();
+    */
         
         return inventory;
     }
-
+/*
     static void assignScenesToLocation(Map map, RegularScene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
-
+*/
     public static InventoryItem[] getSortedInventoryList() {
    System.out.println("\n*** getSortedInventoryList stub function called ***");
     return null;

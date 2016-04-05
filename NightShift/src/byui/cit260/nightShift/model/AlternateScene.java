@@ -5,26 +5,22 @@
  */
 package byui.cit260.nightShift.model;
 
-import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
- * @author Silver
+ * @author Ni shi shei
  */
-public class RegularScene implements Serializable{
-
-    
-    
-      // class instance variables
+public class AlternateScene {
+    // class instance variables
        private String description;
        private String lockedStatus;
        private String doorUnlockItem;
        private String actorStatus;
-       private String alternateScene;
+       private String counterpart;
        private String sceneItems;
 
-    public RegularScene() {
+    public AlternateScene() {
     }
        
 
@@ -60,15 +56,13 @@ public class RegularScene implements Serializable{
         this.actorStatus = actorStatus;
     }
 
-    public String getAlternateScene() {
-        return alternateScene;
+    public String getCounterpart() {
+        return counterpart;
     }
 
-    public void setAlternateScene(String alternateScene) {
-        this.alternateScene = alternateScene;
+    public void setCounterpart(String counterpart) {
+        this.counterpart = counterpart;
     }
-
-
 
     public String getSceneItems() {
         return sceneItems;
@@ -85,7 +79,7 @@ public class RegularScene implements Serializable{
         hash = 71 * hash + Objects.hashCode(this.lockedStatus);
         hash = 71 * hash + Objects.hashCode(this.doorUnlockItem);
         hash = 71 * hash + Objects.hashCode(this.actorStatus);
-        hash = 71 * hash + Objects.hashCode(this.alternateScene);
+        hash = 71 * hash + Objects.hashCode(this.counterpart);
         hash = 71 * hash + Objects.hashCode(this.sceneItems);
         return hash;
     }
@@ -101,7 +95,7 @@ public class RegularScene implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final RegularScene other = (RegularScene) obj;
+        final AlternateScene other = (AlternateScene) obj;
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
@@ -114,7 +108,7 @@ public class RegularScene implements Serializable{
         if (!Objects.equals(this.actorStatus, other.actorStatus)) {
             return false;
         }
-        if (!Objects.equals(this.alternateScene, other.alternateScene)) {
+        if (!Objects.equals(this.counterpart, other.counterpart)) {
             return false;
         }
         if (!Objects.equals(this.sceneItems, other.sceneItems)) {
@@ -125,7 +119,7 @@ public class RegularScene implements Serializable{
 
     @Override
     public String toString() {
-        return "RegularScene{" + "description=" + description + ", lockedStatus=" + lockedStatus + ", doorUnlockItem=" + doorUnlockItem + ", actorStatus=" + actorStatus + ", alternateScene=" + alternateScene + ", sceneItems=" + sceneItems + '}';
+        return "AlternateScene{" + "description=" + description + ", lockedStatus=" + lockedStatus + ", doorUnlockItem=" + doorUnlockItem + ", actorStatus=" + actorStatus + ", counterpart=" + counterpart + ", sceneItems=" + sceneItems + '}';
     }
 
     public void setDescription() {
