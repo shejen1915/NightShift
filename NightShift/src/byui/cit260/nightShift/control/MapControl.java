@@ -6,6 +6,7 @@
 package byui.cit260.nightShift.control;
 
 import byui.cit260.nightShift.model.Actor;
+import byui.cit260.nightShift.model.Location;
 import byui.cit260.nightShift.model.Map;
 import byui.cit260.nightShift.model.Point;
 import byui.cit260.nightShift.model.RegularScene;
@@ -16,6 +17,10 @@ import nightshift.NightShift;
  * @author Ni shi shei
  */
 public class MapControl {
+    
+    private int floorNumber;
+    private int roomNumber;
+    private Location[][] location;
     
     public static Map createMap() {
         // create the map
@@ -405,7 +410,10 @@ public class MapControl {
 */
     
             public static void assignScenesToLocation(Map map, RegularScene[] scenes) {
-            //locations[0][0].getActors().add("actor name")
+            //locations[0][0].getActors().add(NightShift.getActor"actor name")
+            
+            //        this.locations[floor][randomRoom].getItems().add(NightShift.getCurrentGame().getInventroyItems()[0]);
+            
             /*
                 OldJoe("He is your mentor"),
     CleaningLady("Love Interest"),
@@ -426,8 +434,8 @@ public class MapControl {
     Vlad("He never sleeps"),
     KeyserSoza("Fashionista from India");
             */
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            
+            this.locations[0][0]
+                    //this.locations[0][0].getActors().add(NightShift."actor name");
     }
         
         public static void moveActorToStartingLocation(Map map) {

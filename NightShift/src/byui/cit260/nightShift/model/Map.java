@@ -20,6 +20,7 @@ public class Map implements Serializable{
     private int floorNumber;
     private int roomNumber;
     private Location[][] locations;
+    //wed april, 13 1:30 appointment with doctor remington
 
     public Map() {
     }
