@@ -20,7 +20,7 @@ public class StartProgramView extends View {
     //private String promptMessage;
     
     public StartProgramView() {
-        super("\n***********************************************************"
+        super("\n***********************************************************                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          "
        +"\n                                                           "
        +"\n                      NIGHT SHIFT                          "
        +"\n You are Victor a twenty something year old college student"
